@@ -2,8 +2,8 @@
 ## Team Members
 * Sri Harshal Parimi (sparimi@wisc.edu)
 * Shebin Roy Yesudhas (royyesudhas@wisc.edu)
-* Sankarshan Umesh Bhat (sbhat6@wisc.edu) 
-
+* Sankarshan Umesh Bhat (sbhat6@wisc.edu)
+<!- -->
 ### Stage-1: Information Extraction from natural text
 * Dataset
   * README
