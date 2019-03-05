@@ -23,7 +23,7 @@ def cleanCurGrams(cur_gram_list):
 def cleanString(input_string):
     input_string = input_string.replace(";","")
 
-    input_string = input_string.strip("?().,\"")
+    input_string = input_string.strip("?().,:\"")
     return input_string
 
 #feature that returns num of words in the list
@@ -168,6 +168,7 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
                 addTrailingWordFeatures(feature_row, cur_gram_string, suffixes)
                 addLeadingWordFeatures(feature_row, cur_gram_string, prefixes)
 
+                #logic for checking if word surrounded by parantheses
                 string_with_para = not_clean_string.strip("?.,\"")
                 if(string_with_para.startswith("(") and string_with_para.endswith(")")):
                     feature_row["surr_para"] = 1
@@ -217,7 +218,7 @@ if __name__ == "__main__":
 
     #path to marked up docs and output path to create csv files
     #TODO: separate training and test csv files,docs
-    input_folder_path = "train_markedup_docs"
+    input_folder_path = "cleaned_markedup_docs"
     files = getFiles(input_folder_path)
 
     output_file_path = "datasets/train.csv"
