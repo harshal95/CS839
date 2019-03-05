@@ -1,5 +1,7 @@
 import os
 import csv
+import codecs
+from nltk.tokenize import sent_tokenize
 
 #get list of files inside a folder
 def getFiles(folder_path):
@@ -21,7 +23,7 @@ def cleanCurGrams(cur_gram_list):
 def cleanString(input_string):
     input_string = input_string.replace(";","")
 
-    input_string = input_string.strip("().,")
+    input_string = input_string.strip("?().,\"")
     return input_string
 
 #feature that returns num of words in the list
@@ -96,82 +98,85 @@ def addLeadingWordFeatures(feature_row, cur_gram_string, prefixes):
             feature_row["pref_"+prefix] = 0
 
 #function to create rows of features from words in a file
-def createFeatureRows(words, candidate_adjacent_words, suffixes, prefixes):
+def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes):
     n_grams = [1,2,3]
     csv_rows = []
-    numwords = len(words)
+
 
     #consider words of sizes in n_grams
     for n in n_grams:
-        for index in range(numwords - n + 1):
-            cur_gram_list = words[index : index+n]
-            feature_row = {}
+        #pick each sentence from list of sentences for a file
+        for sentence in sentence_words:
+            numwords = len(sentence)
+            for index in range(numwords - n + 1):
+                cur_gram_list = sentence[index : index+n]
+                feature_row = {}
 
-            #if an n_gram is surrounded by markup, then class label is 1
-            if '<person>' in cur_gram_list[0] and '</person>' in cur_gram_list[-1]:
-                cur_gram_list[0] = cur_gram_list[0].replace('<person>','')
-                cur_gram_list[-1] = cur_gram_list[-1].replace('</person>','')
-                feature_row["class"] = 1
-            else:
-                feature_row["class"] = 0
-
-            #remove overlapping person tags and replace class label as 0
-            #Ex- <person>Mark Craven.</person> <person>Craven</person> is not a valid trigram. But valid bigram and unigram respectively.
-            for i in range(len(cur_gram_list)):
-                if '<person>' in cur_gram_list[i] or '</person>' in cur_gram_list[i]:
-                    cur_gram_list[i] = cur_gram_list[i].replace('<person>','')
-                    cur_gram_list[i] = cur_gram_list[i].replace('</person>', '')
+                #if an n_gram is surrounded by markup, then class label is 1
+                if '<person>' in cur_gram_list[0] and '</person>' in cur_gram_list[-1]:
+                    cur_gram_list[0] = cur_gram_list[0].replace('<person>','')
+                    cur_gram_list[-1] = cur_gram_list[-1].replace('</person>','')
+                    feature_row["class"] = 1
+                else:
                     feature_row["class"] = 0
 
-            #TODO: add various features for the current row(use feature_row dictionary)
+                #remove overlapping person tags and replace class label as 0
+                #Ex- <person>Mark Craven.</person> <person>Craven</person> is not a valid trigram. But valid bigram and unigram respectively.
+                for i in range(len(cur_gram_list)):
+                    if '<person>' in cur_gram_list[i] or '</person>' in cur_gram_list[i]:
+                        cur_gram_list[i] = cur_gram_list[i].replace('<person>','')
+                        cur_gram_list[i] = cur_gram_list[i].replace('</person>', '')
+                        feature_row["class"] = 0
+
+                #TODO: add various features for the current row(use feature_row dictionary)
 
 
 
-            #join n_gram wordlist into a single string separated by spaces
-            cur_gram_string = ' '.join(cur_gram_list)
+                #join n_gram wordlist into a single string separated by spaces
+                cur_gram_string = ' '.join(cur_gram_list)
 
-            not_clean_string = cur_gram_string
+                not_clean_string = cur_gram_string
 
-            cur_gram_string = cleanString(cur_gram_string)
+                cur_gram_string = cleanString(cur_gram_string)
 
-            for i, cur_gram in enumerate(cur_gram_list):
-                cur_gram_list[i] = cleanString(cur_gram_list[i])
-
-
-            feature_row["input"] = cur_gram_string
-            feature_row["num_words"] = getNumWords(cur_gram_list)
-            feature_row["all_start_capital"] = isStartingCapital(cur_gram_list)
-            feature_row["num_start_capital"] = numStartingCapitals(cur_gram_list)
-
-            #logic for adding features related to next and prev words
-            next_word = ""
-            prev_word = ""
-
-            if(index + n) < numwords:
-                next_word = words[index + n]
+                for i, cur_gram in enumerate(cur_gram_list):
+                    cur_gram_list[i] = cleanString(cur_gram_list[i])
 
 
-            if(index - 1 >= 0):
-                prev_word = words[index - 1]
+                feature_row["input"] = cur_gram_string
+                feature_row["num_words"] = getNumWords(cur_gram_list)
+                feature_row["all_start_capital"] = isStartingCapital(cur_gram_list)
+                feature_row["num_start_capital"] = numStartingCapitals(cur_gram_list)
 
-            addAdjacentWordFeatures(feature_row, next_word, "next", candidate_adjacent_words)
-            addAdjacentWordFeatures(feature_row, prev_word, "prev", candidate_adjacent_words)
+                #logic for adding features related to next and prev words
+                next_word = ""
+                prev_word = ""
 
-
-            #logic for adding prefix and suffix features
-
-            addTrailingWordFeatures(feature_row, cur_gram_string, suffixes)
-            addLeadingWordFeatures(feature_row, cur_gram_string, prefixes)
-
-            string_with_para = not_clean_string.strip(".,")
-            if(string_with_para.startswith("(") and string_with_para.endswith(")")):
-                feature_row["surr_para"] = 1
-            else:
-                feature_row["surr_para"] = 0
+                if(index + n) < numwords:
+                    next_word = sentence[index + n]
 
 
+                if(index - 1 >= 0):
+                    prev_word = sentence[index - 1]
 
-            csv_rows.append(feature_row)
+                addAdjacentWordFeatures(feature_row, next_word, "next", candidate_adjacent_words)
+                addAdjacentWordFeatures(feature_row, prev_word, "prev", candidate_adjacent_words)
+
+
+                #logic for adding prefix and suffix features
+
+                addTrailingWordFeatures(feature_row, cur_gram_string, suffixes)
+                addLeadingWordFeatures(feature_row, cur_gram_string, prefixes)
+
+                string_with_para = not_clean_string.strip("?.,\"")
+                if(string_with_para.startswith("(") and string_with_para.endswith(")")):
+                    feature_row["surr_para"] = 1
+                else:
+                    feature_row["surr_para"] = 0
+
+
+
+                csv_rows.append(feature_row)
 
     return csv_rows
 
@@ -183,17 +188,26 @@ def createFeatureRows(words, candidate_adjacent_words, suffixes, prefixes):
 def getExamples(file, folder_path, candidate_adjacent_words, suffixes, prefixes):
     file_path = folder_path + "/"+ file
 
-    words = []
 
-    file_ptr = open(file_path, "r")
+    file_ptr = codecs.open(file_path, "r", encoding='utf-8', errors='ignore')
 
-    for line in file_ptr:
-        for word in line.split():
+    file_contents = file_ptr.read()
+
+    file_contents = file_contents.replace('\n',' ')
+
+    sentences = sent_tokenize(file_contents)
+
+    sentences_words = []
+
+    for sentence in sentences:
+        words = []
+        for word in sentence.split():
             words.append(word)
+        sentences_words.append(words)
 
     file_ptr.close()
 
-    return createFeatureRows(words, candidate_adjacent_words, suffixes, prefixes)
+    return createFeatureRows(sentences_words, candidate_adjacent_words, suffixes, prefixes)
 
 
 
@@ -213,7 +227,7 @@ if __name__ == "__main__":
     #TODO: Find a better way to represent feature names if possible
     field_names = ["input", "num_words", "all_start_capital", "num_start_capital","surr_para"]
 
-    candidate_adj_words = ["is", "are", "said", "was", "by", "from"]
+    candidate_adj_words = ["is", "are", "said", "was", "by", "from", "captain", "director", "producer", "cinematographer", "general", "writers", "princess", "father", "brother", "doctor"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
     prefixes = ["Mr", "Mr.", "Mrs", "Mrs."]
 
