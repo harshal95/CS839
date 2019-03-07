@@ -102,32 +102,43 @@ def getTagsForSentence(sentence):
 	return nltk.pos_tag(sentence.split())
 
 def getValueForTag(word, tag):
-	value_map = {
-		'NNP' : 10,
-		'NNPS' : 5,
-		'NNS' : 5,
-		'NN' : 5,
-		'VB' : 9,
-		'VBD' : 9,
-		'VBG' : 9,
-		'VBN' : 9,
-		'VBP' : 9,
-		'VBZ' : 9,
-		'RB' : 8,
-		'CC' : 7,
-		'IN' : 4,
-		'POS' : 3,
-		'JJ' : 6,
-		'JJR' : 6,
-		'JJS' : 6,
-	}
-	for tokens in tag:
-		if tokens[0] == word:
-			return value_map.get(tokens[1], 0)
-	return 0
+    value_map = {
+        'NNP' : 10,
+        'NNPS' : 5,
+        'NNS' : 5,
+        'NN' : 5,
+        'VB' : 9,
+        'VBD' : 9,
+        'VBG' : 9,
+        'VBN' : 9,
+        'VBP' : 9,
+        'VBZ' : 9,
+        'RB' : 8,
+        'CC' : 7,
+        'IN' : 4,
+        'POS' : 3,
+        'JJ' : 6,
+        'JJR' : 6,
+        'JJS' : 6,
+    }
+    for tokens in tag:
+        if word in tokens[0]:
+            return value_map.get(tokens[1], 0)
+    return 0
+
+def cleanSentence(sentence):
+    sentence = sentence.replace('<person>', '')
+    sentence = sentence.replace('</person>', '')
+    return sentence
+
+def isWordAllCaps(curr_words):
+    for word in curr_words:
+        if not word.isupper():
+            return 0
+    return 1
 
 #function to create rows of features from words in a file
-def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes):
+def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes, file_path):
     n_grams = [1,2,3]
     csv_rows = []
 
@@ -137,7 +148,7 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
         #pick each sentence from list of sentences for a file
         for sentence in sentence_words:
             numwords = len(sentence)
-            tags = getTagsForSentence(' '.join(sentence))
+            tags = getTagsForSentence(cleanSentence(' '.join(sentence)))
             for index in range(numwords - n + 1):
                 cur_gram_list = sentence[index : index+n]
                 feature_row = {}
@@ -230,7 +241,7 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
                     feature_row["prev_word_tag"] = getValueForTag(prev_word, tags)
                 else:
                     feature_row["prev_word_tag"] = 0
-
+                feature_row["all_caps"] = isWordAllCaps(cur_gram_list)
                 csv_rows.append(feature_row)
 
     return csv_rows
@@ -262,7 +273,7 @@ def getExamples(file, folder_path, candidate_adjacent_words, suffixes, prefixes)
 
     file_ptr.close()
 
-    return createFeatureRows(sentences_words, candidate_adjacent_words, suffixes, prefixes)
+    return createFeatureRows(sentences_words, candidate_adjacent_words, suffixes, prefixes, file_path)
 
 
 
@@ -280,7 +291,7 @@ if __name__ == "__main__":
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
-    field_names = ["input", "num_words", "all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag"]
+    field_names = ["input", "num_words", "all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag", "all_caps"]
 
     candidate_adj_words = ["is", "are", "said", "was", "by", "from", "captain", "director", "producer", "cinematographer", "general", "writers", "princess", "father", "brother", "doctor"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
