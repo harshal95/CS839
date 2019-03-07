@@ -1,6 +1,7 @@
 import os
 import csv
 import codecs
+import nltk
 from nltk.tokenize import sent_tokenize
 
 #get list of files inside a folder
@@ -97,6 +98,34 @@ def addLeadingWordFeatures(feature_row, cur_gram_string, prefixes):
         else:
             feature_row["pref_"+prefix] = 0
 
+def getTagsForSentence(sentence):
+	return nltk.pos_tag(sentence.split())
+
+def getValueForTag(word, tag):
+	value_map = {
+		'NNP' : 10,
+		'NNPS' : 5,
+		'NNS' : 5,
+		'NN' : 5,
+		'VB' : 9,
+		'VBD' : 9,
+		'VBG' : 9,
+		'VBN' : 9,
+		'VBP' : 9,
+		'VBZ' : 9,
+		'RB' : 8,
+		'CC' : 7,
+		'IN' : 4,
+		'POS' : 3,
+		'JJ' : 6,
+		'JJR' : 6,
+		'JJS' : 6,
+	}
+	for tokens in tag:
+		if tokens[0] == word:
+			return value_map.get(tokens[1], 0)
+	return 0
+
 #function to create rows of features from words in a file
 def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes):
     n_grams = [1,2,3]
@@ -108,6 +137,7 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
         #pick each sentence from list of sentences for a file
         for sentence in sentence_words:
             numwords = len(sentence)
+            tags = getTagsForSentence(' '.join(sentence))
             for index in range(numwords - n + 1):
                 cur_gram_list = sentence[index : index+n]
                 feature_row = {}
@@ -175,7 +205,31 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
                 else:
                     feature_row["surr_para"] = 0
 
+                if(getNumWords(cur_gram_list) == 1):
+                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags)
+                    feature_row["n2_word_tag"] = 0
+                    feature_row["n3_word_tag"] = 0
+                elif(getNumWords(cur_gram_list) == 2):
+                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags)
+                    feature_row["n2_word_tag"] = getValueForTag(cur_gram_list[1], tags)
+                    feature_row["n3_word_tag"] = 0
+                elif(getNumWords(cur_gram_list) == 3):
+                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags)
+                    feature_row["n2_word_tag"] = getValueForTag(cur_gram_list[1], tags)
+                    feature_row["n3_word_tag"] = getValueForTag(cur_gram_list[2], tags)
+                else:
+                    feature_row["n1_word_tag"] = 0
+                    feature_row["n2_word_tag"] = 0
+                    feature_row["n3_word_tag"] = 0
 
+                if next_word:
+                    feature_row["next_word_tag"] = getValueForTag(next_word, tags)
+                else:
+                    feature_row["next_word_tag"] = 0
+                if prev_word:
+                    feature_row["prev_word_tag"] = getValueForTag(prev_word, tags)
+                else:
+                    feature_row["prev_word_tag"] = 0
 
                 csv_rows.append(feature_row)
 
@@ -218,15 +272,15 @@ if __name__ == "__main__":
 
     #path to marked up docs and output path to create csv files
     #TODO: separate training and test csv files,docs
-    input_folder_path = "cleaned_markedup_docs"
+    input_folder_path = "../cleaned_markedup_docs"
     files = getFiles(input_folder_path)
 
-    output_file_path = "datasets/train.csv"
+    output_file_path = "../datasets/train_2.csv"
     csv_file = open(output_file_path, 'w')
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
-    field_names = ["input", "num_words", "all_start_capital", "num_start_capital","surr_para"]
+    field_names = ["input", "num_words", "all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag"]
 
     candidate_adj_words = ["is", "are", "said", "was", "by", "from", "captain", "director", "producer", "cinematographer", "general", "writers", "princess", "father", "brother", "doctor"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
@@ -242,11 +296,7 @@ if __name__ == "__main__":
     for prefix in prefixes:
         field_names.append("pref_"+prefix)
 
-
-
     field_names.append('class')
-
-
 
     csv_writer = csv.DictWriter(csv_file, fieldnames=field_names)
     csv_writer.writeheader()
