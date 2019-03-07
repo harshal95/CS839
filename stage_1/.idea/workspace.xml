@@ -3,227 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b0ea03d4-48d5-46b2-9c1c-6b6731dd4e57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/extract_markups.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/extract_markups.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/train.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/111.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/112.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/113.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/114.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/115.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/116.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/117.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/118.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/119.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/120.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/121.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/122.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/123.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/124.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/125.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/126.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/127.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/128.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/129.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/130.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/131.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/132.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/133.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/134.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/135.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/136.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/137.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/138.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/139.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/140.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/141.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/142.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/143.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/144.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/145.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/146.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/147.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/148.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/149.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/151.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/152.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/153.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/154.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/155.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/156.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/157.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/158.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/159.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/160.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/161.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/162.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/164.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/165.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/166.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/167.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/168.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/169.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/170.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/171.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/172.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/173.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/174.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/175.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/176.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/177.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/178.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/179.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/180.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/181.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/182.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/183.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/184.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/185.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/186.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/187.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/188.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/189.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/190.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/191.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/192.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/193.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/194.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/195.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/196.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/197.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/198.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/199.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/201.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/202.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/203.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/204.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/205.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/206.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/207.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/208.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/209.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/210.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/211.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/212.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/213.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/214.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/215.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/216.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/217.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/218.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/219.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marked_docs/220.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/221.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/222.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/223.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/224.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/225.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/226.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/227.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/228.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/229.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/230.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/231.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/232.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/233.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/234.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/235.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/236.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/237.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/238.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/239.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/240.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/241.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/242.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/243.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/244.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/245.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/246.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/247.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/248.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/249.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/251.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/252.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/253.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/254.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/255.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/256.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/257.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/258.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/259.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/260.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/261.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/262.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/263.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/264.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/265.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/266.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/267.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/268.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/269.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/270.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/271.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/272.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/273.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/274.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/275.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/276.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/277.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/278.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/279.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/280.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/281.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/282.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/283.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/284.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/285.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/286.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/287.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/288.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/289.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/290.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/291.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/292.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/293.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/294.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/295.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/296.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/297.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/298.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/299.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/300.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/301.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/302.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/303.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/304.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/305.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/306.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/307.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/308.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/309.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/310.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/311.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/312.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/313.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/314.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/315.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/316.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/317.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/318.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/319.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/320.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/321.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/322.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/323.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/324.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/325.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/326.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/327.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/328.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/329.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_markedup_docs/330.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/extract_markups.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="130" column="69" lean-forward="true" selection-start-line="130" selection-start-column="69" selection-end-line="130" selection-end-column="69" />
+            <state relative-caret-position="521">
+              <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -375,23 +154,24 @@
       <workItem from="1551395097524" duration="2207000" />
       <workItem from="1551525089649" duration="371000" />
       <workItem from="1551567531370" duration="529000" />
-      <workItem from="1551737392793" duration="12383000" />
+      <workItem from="1551737392793" duration="13075000" />
+      <workItem from="1551835160343" duration="146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23234000" />
+    <option name="totallyTimeSpent" value="24072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26656026" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27134877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,8 +202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/extract_markups.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="130" column="69" lean-forward="true" selection-start-line="130" selection-start-column="69" selection-end-line="130" selection-end-column="69" />
+        <state relative-caret-position="521">
+          <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
