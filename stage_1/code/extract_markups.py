@@ -276,22 +276,11 @@ def getExamples(file, folder_path, candidate_adjacent_words, suffixes, prefixes)
     return createFeatureRows(sentences_words, candidate_adjacent_words, suffixes, prefixes, file_path)
 
 
-def split_files(intput_path,output__path):
-
-    files = glob.glob("../stage_1/cleaned_markedup_docs/*.txt")
-    train, test = sklearn.model_selection.train_test_split(files, test_size=0.33)
-
-    for file in train:
-        shutil.copy(file, "../stage_1/set-I/" + file.split("\\")[1])
-
-    for file in test:
-        shutil.copy(file, "../stage_1/set-J/" + file.split("\\")[1])
-
-def generrate_test_train_files(input_folder_path,output_file_path):
+def generate_test_train_files(input_folder_path,output_file_path):
 
     files = getFiles(input_folder_path)
 
-    csv_file = open(output_file_path, 'w')
+    csv_file = codecs.open(output_file_path, 'w',encoding='utf-8')
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
@@ -332,5 +321,5 @@ if __name__ == "__main__":
     test_input_folder_path = "../set-J"
     train_output_file_path = "../datasets/train.csv"
     test_output_file_path = "../datasets/test.csv"
-    generrate_test_train_files(train_input_folder_path,train_output_file_path)
-    generrate_test_train_files(test_input_folder_path,test_output_file_path)
+    generate_test_train_files(train_input_folder_path,train_output_file_path)
+    generate_test_train_files(test_input_folder_path,test_output_file_path)
