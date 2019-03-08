@@ -237,6 +237,27 @@ def containsAdverb(cur_gram_list, tags, pos_flag):
             return 1
     return 0
 
+def isLanguage(cur_gram_string):
+    languages = ["English", "Spanish", "Italian", "Roman", "Hasidics","Jews", "Viennese", "Kurdish", "Farsi", "Hispanic", "Hebrew", "Latin", "Irish", "Catholic"]
+
+    for language in languages:
+        if(language in cur_gram_string):
+            return 1
+    return 0
+
+def isLocation(cur_gram_string):
+    locations = ["Arizona","England", "North","Northern","West","Western","East","Eastern","South","Southern","Ireland", "France","New","York", "Paris", "Eldorado", "California", "Paraguay", "Coast", "Broadway", "Disney", "Tehran","America","Europe", "Southeast", "Chicago", "Silicon Valley", "Ohio", "Gibraltar","Nantucket Island","Australia","Los Angeles","England", "Texas", "Iceland", "Alps", "Manchester", "World", "Oz", "Jersey", "Nevada", "Sydney", "Rushmore", "Spain", "Vietnam", "Washington", "Tbilisi", "Georgia", "Kentucky", "Rock", "Town", "City", "Elks Club", "Central Park", "Plaza Motel", "High", "School", "Grand Central Station", "Hollywood", "Parliament", "Iraq", "Anschluss", "Assisi", "States", "United"]
+    for location in locations:
+        if(location in cur_gram_string):
+            return 1
+    return 0
+
+def isStopWord(cur_gram_string):
+    stop_words = ["on", "whereas", "north", "boy", "christmas", "eve", "new", "year", "oscar", "academy", "called", "if", "thanksgiving", "better", "oh", "time", "i", "tight", "poor", "get", "mild", "live", "plump", "instead", "just", "small", "will", "halloween", "love", "ivy", "go", "down", "get", "come", "actually", "but", "best", "let", "big", "the", "sure"]
+    for stop_word in stop_words:
+        if stop_word.lower() in cur_gram_string.lower():
+            return 1
+    return 0
 
 #function to create rows of features from words in a file
 def createFeatureRows(sentence_words, preceeding_adj_words, succeeding_adj_words, suffixes, prefixes, file_path):
@@ -383,6 +404,9 @@ def createFeatureRows(sentence_words, preceeding_adj_words, succeeding_adj_words
                 feature_row["contains_prepositions"] = containsPrepositions(cur_gram_list,tags, pos_flag)
                 feature_row["contains_adjectives"] = containsAdjective(cur_gram_list, tags, pos_flag)
                 feature_row["contains_adverbs"] = containsAdverb(cur_gram_list, tags, pos_flag)
+                feature_row["is_location"] = isLocation(cur_gram_string)
+                feature_row["is_language"] = isLanguage(cur_gram_string)
+                #feature_row["is_stop_word"] = isStopWord(cur_gram_string)
 
                 csv_rows.append(feature_row)
 
@@ -426,7 +450,7 @@ def generate_test_train_files(input_folder_path,output_file_path):
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
-    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation", "contains_articles", "contains_pronouns", "contains_prepositions", "contains_adjectives", "contains_adverbs"]
+    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation", "contains_articles", "contains_pronouns", "contains_prepositions", "contains_adjectives", "contains_adverbs", "is_location", "is_language"]
 
     preceding_adj_words = ["a", "an", "the", "by", "from", "at", "in", "on"]
     succeeding_adj_words = ["is", "says", "said", "was"]
