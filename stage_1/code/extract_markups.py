@@ -66,6 +66,21 @@ def hasSuffix(cur_gram_string, suffix):
     else:
         return 0
 
+def containsStrayCharacters(cur_gram_string):
+    input_string = cur_gram_string
+    if(len(cur_gram_string) >= 2):
+        apostrophe = "'s"
+        if(apostrophe in cur_gram_string[-2:]):
+            input_string = cur_gram_string[:-2]
+
+    stray_chars =[':','\'', '-','\"',',','(',')']
+
+    for stray_char in stray_chars:
+        if stray_char in input_string:
+            return 1
+
+    return 0
+
 #function to check if two words match
 def checkWordMatch(cur_gram_string, candidate_string):
     if(cur_gram_string.lower() == candidate_string.lower()):
@@ -101,7 +116,9 @@ def addLeadingWordFeatures(feature_row, cur_gram_string, prefixes):
 def getTagsForSentence(sentence):
 	return nltk.pos_tag(sentence.split())
 
-def getValueForTag(word, tag):
+
+def getValueForTag(word, tag, pos_flag):
+
     value_map = {
         'NNP' : 10,
         'NNPS' : 5,
@@ -122,7 +139,10 @@ def getValueForTag(word, tag):
         'JJS' : 6,
     }
     for tokens in tag:
+
         if word in tokens[0]:
+            if tokens[1] == 'NNP' and pos_flag == 1:
+                return 0
             return value_map.get(tokens[1], 0)
     return 0
 
@@ -136,6 +156,19 @@ def isWordAllCaps(curr_words):
         if not word.isupper():
             return 0
     return 1
+
+def containsCaps(curr_words):
+    for word in curr_words:
+        if word.isupper():
+            return 1
+    return 0
+
+def startWithRelation(curr_word):
+    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad"]
+    input_word = curr_word.lower()
+    if(input_word in relation_word_list):
+        return 1
+    return 0
 
 #function to create rows of features from words in a file
 def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes, file_path):
@@ -216,32 +249,69 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
                 else:
                     feature_row["surr_para"] = 0
 
+                feature_row["starts_relation"] = startWithRelation(cur_gram_list[0])
+                feature_row["contains_stray"] = containsStrayCharacters(cur_gram_string)
+                feature_row["all_caps"] = isWordAllCaps(cur_gram_list)
+                feature_row["contains_caps"] = containsCaps(cur_gram_list)
+
+                pos_flag = 0
+                if feature_row["starts_relation"] == 1 or feature_row["contains_stray"] == 1 or feature_row["all_caps"] == 1:
+                    pos_flag = 1
+
+                next_word_pos = getValueForTag(next_word, tags, pos_flag)
                 if(getNumWords(cur_gram_list) == 1):
-                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags)
+
+                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags, pos_flag)
+                    '''
+                    if next_word_pos == 10:
+                        feature_row["n1_word_tag"] = 0
+                    '''
                     feature_row["n2_word_tag"] = 0
                     feature_row["n3_word_tag"] = 0
                 elif(getNumWords(cur_gram_list) == 2):
-                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags)
-                    feature_row["n2_word_tag"] = getValueForTag(cur_gram_list[1], tags)
+                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags, pos_flag)
+                    feature_row["n2_word_tag"] = getValueForTag(cur_gram_list[1], tags, pos_flag)
+                    '''
+                    if next_word_pos == 10:
+                        feature_row["n1_word_tag"] = 0
+                        feature_row["n2_word_tag"] = 0
+                    '''
                     feature_row["n3_word_tag"] = 0
                 elif(getNumWords(cur_gram_list) == 3):
-                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags)
-                    feature_row["n2_word_tag"] = getValueForTag(cur_gram_list[1], tags)
-                    feature_row["n3_word_tag"] = getValueForTag(cur_gram_list[2], tags)
+                    feature_row["n1_word_tag"] = getValueForTag(cur_gram_list[0], tags, pos_flag)
+                    feature_row["n2_word_tag"] = getValueForTag(cur_gram_list[1], tags, pos_flag)
+                    feature_row["n3_word_tag"] = getValueForTag(cur_gram_list[2], tags, pos_flag)
+
                 else:
                     feature_row["n1_word_tag"] = 0
                     feature_row["n2_word_tag"] = 0
                     feature_row["n3_word_tag"] = 0
 
                 if next_word:
-                    feature_row["next_word_tag"] = getValueForTag(next_word, tags)
+
+                    feature_row["next_word_tag"] = getValueForTag(next_word, tags, pos_flag)
                 else:
                     feature_row["next_word_tag"] = 0
                 if prev_word:
-                    feature_row["prev_word_tag"] = getValueForTag(prev_word, tags)
+                    feature_row["prev_word_tag"] = getValueForTag(prev_word, tags, pos_flag)
                 else:
                     feature_row["prev_word_tag"] = 0
-                feature_row["all_caps"] = isWordAllCaps(cur_gram_list)
+
+
+
+                if next_word:
+                    feature_row["next_capital_start"] = isStartingCapital([next_word])
+                else:
+                    feature_row["next_capital_start"] = 0
+
+                if prev_word:
+                    feature_row["prev_capital_start"] = isStartingCapital([prev_word])
+                else:
+                    feature_row["prev_capital_start"] = 0
+
+
+
+
                 csv_rows.append(feature_row)
 
     return csv_rows
@@ -284,11 +354,11 @@ def generate_test_train_files(input_folder_path,output_file_path):
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
-    field_names = ["input", "num_words", "all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag", "all_caps"]
+    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation"]
 
-    candidate_adj_words = ["is", "are", "said", "was", "by", "from", "captain", "director", "producer", "cinematographer", "general", "writers", "princess", "father", "brother", "doctor"]
+    candidate_adj_words = ["is", "are", "said", "was", "by", "from","at","in", "on"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
-    prefixes = ["Mr", "Mr.", "Mrs", "Mrs."]
+    prefixes = ["Mr", "Mr.", "Mrs", "Mrs.", "Lt"]
 
     for adj_word in candidate_adj_words:
         field_names.append("next_"+adj_word)
@@ -319,7 +389,7 @@ def generate_test_train_files(input_folder_path,output_file_path):
 if __name__ == "__main__":
     train_input_folder_path = "../set-I"
     test_input_folder_path = "../set-J"
-    train_output_file_path = "../datasets/train.csv"
-    test_output_file_path = "../datasets/test.csv"
+    train_output_file_path = "../datasets/train_harshal.csv"
+    test_output_file_path = "../datasets/test_harshal.csv"
     generate_test_train_files(train_input_folder_path,train_output_file_path)
     generate_test_train_files(test_input_folder_path,test_output_file_path)
