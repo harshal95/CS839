@@ -122,6 +122,7 @@ def getValueForTag(word, tag, pos_flag):
     value_map = {
         'NNP' : 10,
         'NNPS' : 5,
+        'WP' : 5,
         'NNS' : 5,
         'NN' : 5,
         'VB' : 9,
@@ -130,13 +131,23 @@ def getValueForTag(word, tag, pos_flag):
         'VBN' : 9,
         'VBP' : 9,
         'VBZ' : 9,
+        'MD' : 9,
         'RB' : 8,
+        'RBR' : 8,
+        'RBS' : 8,
+        'RP' : 8,
+        'WRB' : 8,
         'CC' : 7,
         'IN' : 4,
+        'UH' : 4,
         'POS' : 3,
         'JJ' : 6,
         'JJR' : 6,
         'JJS' : 6,
+        'CD' : 2,
+        'DT' : 1,
+        'WDT' : 1,
+        'PDT' : 1
     }
     for tokens in tag:
 
@@ -179,12 +190,53 @@ def containsArticles(cur_gram_list):
     return 0
 
 def containsPronouns(cur_gram_list):
-    pronouns = ["i", "we", "my", "you", "it's", "he", "she", "she's", "he's", "co"]
+    pronouns = ["i", "we", "my", "you", "it's", "he", "she", "she's", "he's", "co", "that", "what", "whatever" ,"whatsoever", "which", "who", "whom","whosoever"]
     for cur_gram in cur_gram_list:
         input_word = cur_gram.lower()
         if(input_word in pronouns):
             return 1
     return 0
+
+def containsPrepositions(cur_gram_list, tags, pos_flag):
+    for cur_gram in cur_gram_list:
+        tag_val = getValueForTag(cur_gram, tags, pos_flag)
+        if(tag_val == 4 or tag_val == 7):
+            return 1
+    return 0
+
+
+
+def containsVerb(cur_gram_list, tags, pos_flag):
+    '''
+    verbs = ["go", "die", "is", "get", "will", "come"]
+    for cur_gram in cur_gram_list:
+        input_word = cur_gram.lower()
+        if(input_word in verbs):
+            return 1
+    return 0
+    '''
+
+
+    for cur_gram in cur_gram_list:
+        tag_val = getValueForTag(cur_gram, tags, pos_flag)
+        if(tag_val == 9):
+            return 1
+    return 0
+
+def containsAdjective(cur_gram_list, tags, pos_flag):
+    for cur_gram in cur_gram_list:
+        tag_val = getValueForTag(cur_gram, tags, pos_flag)
+        if(tag_val == 6):
+            return 1
+    return 0
+
+def containsAdverb(cur_gram_list, tags, pos_flag):
+    for cur_gram in cur_gram_list:
+        tag_val = getValueForTag(cur_gram, tags, pos_flag)
+        if(tag_val == 8):
+            return 1
+    return 0
+
 
 #function to create rows of features from words in a file
 def createFeatureRows(sentence_words, preceeding_adj_words, succeeding_adj_words, suffixes, prefixes, file_path):
@@ -328,6 +380,9 @@ def createFeatureRows(sentence_words, preceeding_adj_words, succeeding_adj_words
 
                 feature_row["contains_articles"] = containsArticles(cur_gram_list)
                 feature_row["contains_pronouns"] = containsPronouns(cur_gram_list)
+                feature_row["contains_prepositions"] = containsPrepositions(cur_gram_list,tags, pos_flag)
+                feature_row["contains_adjectives"] = containsAdjective(cur_gram_list, tags, pos_flag)
+                feature_row["contains_adverbs"] = containsAdverb(cur_gram_list, tags, pos_flag)
 
                 csv_rows.append(feature_row)
 
@@ -371,7 +426,7 @@ def generate_test_train_files(input_folder_path,output_file_path):
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
-    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation", "contains_articles", "contains_pronouns"]
+    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation", "contains_articles", "contains_pronouns", "contains_prepositions", "contains_adjectives", "contains_adverbs"]
 
     preceding_adj_words = ["a", "an", "the", "by", "from", "at", "in", "on"]
     succeeding_adj_words = ["is", "says", "said", "was"]
