@@ -246,14 +246,14 @@ def isLanguage(cur_gram_string):
     return 0
 
 def isLocation(cur_gram_string):
-    locations = ["Arizona","England", "North","Northern","West","Western","East","Eastern","South","Southern","Ireland", "France","New","York", "Paris", "Eldorado", "California", "Paraguay", "Coast", "Broadway", "Disney", "Tehran","America","Europe", "Southeast", "Chicago", "Silicon Valley", "Ohio", "Gibraltar","Nantucket Island","Australia","Los Angeles","England", "Texas", "Iceland", "Alps", "Manchester", "World", "Oz", "Jersey", "Nevada", "Sydney", "Rushmore", "Spain", "Vietnam", "Washington", "Tbilisi", "Georgia", "Kentucky", "Rock", "Town", "City", "Elks Club", "Central Park", "Plaza Motel", "High", "School", "Grand Central Station", "Hollywood", "Parliament", "Iraq", "Anschluss", "Assisi", "States", "United","San Jose","Northern Ireland","Detroit","New England","Brooklyn","East Coast"]
+    locations = ["Arizona","England", "North","Northern","West","Western","East","Eastern","South","Southern","Ireland", "France","New","York", "Paris", "Eldorado", "California", "Paraguay", "Coast", "Broadway", "Disney", "Tehran","America","Europe", "Southeast", "Chicago", "Silicon Valley", "Ohio", "Gibraltar","Nantucket Island","Australia","Los Angeles","England", "Texas", "Iceland", "Alps", "Manchester", "World", "Oz", "Jersey", "Nevada", "Sydney", "Rushmore", "Spain", "Vietnam", "Washington", "Tbilisi", "Georgia", "Kentucky", "Rock", "Town", "City", "Elks Club", "Central Park", "Plaza Motel", "High", "School", "Grand Central Station", "Hollywood", "Parliament", "Iraq", "Anschluss", "Assisi", "States", "United"]
     for location in locations:
         if(location in cur_gram_string):
             return 1
     return 0
 
 def isStopWord(cur_gram_string):
-    stop_words = ["on", "whereas", "north", "boy", "christmas", "eve", "new", "year", "oscar", "academy", "called", "if", "thanksgiving", "better", "oh", "time", "i", "tight", "poor", "get", "mild", "live", "plump", "instead", "just", "small", "will", "halloween", "love", "ivy", "go", "down", "get", "come", "actually", "but", "best", "let", "big", "the", "sure","Disney's","could"]
+    stop_words = ["on", "whereas", "north", "boy", "christmas", "eve", "new", "year", "oscar", "academy", "called", "if", "thanksgiving", "better", "oh", "time", "i", "tight", "poor", "get", "mild", "live", "plump", "instead", "just", "small", "will", "halloween", "love", "ivy", "go", "down", "get", "come", "actually", "but", "best", "let", "big", "the", "sure"]
     for stop_word in stop_words:
         if stop_word.lower() in cur_gram_string.lower():
             return 1
