@@ -164,7 +164,7 @@ def containsCaps(curr_words):
     return 0
 
 def startWithRelation(curr_word):
-    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad", "congressman", "sir", "fbi", "gov", "writer/director", "screenwriter", "constable"]
+    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad", "congressman", "sir", "fbi", "gov", "writer/director", "screenwriter", "constable", "prime", "minister", "saint", "secret", "service", "agent", "mafia", "writer", "member"]
     input_word = curr_word.lower()
     if(input_word in relation_word_list):
         return 1
@@ -179,14 +179,15 @@ def containsArticles(cur_gram_list):
     return 0
 
 def containsPronouns(cur_gram_list):
-    pronouns = ["i", "we", "my", "you", "it's", "he"]
+    pronouns = ["i", "we", "my", "you", "it's", "he", "she", "she's", "he's", "co"]
     for cur_gram in cur_gram_list:
         input_word = cur_gram.lower()
         if(input_word in pronouns):
             return 1
     return 0
+
 #function to create rows of features from words in a file
-def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes, file_path):
+def createFeatureRows(sentence_words, preceeding_adj_words, succeeding_adj_words, suffixes, prefixes, file_path):
     n_grams = [1,2,3]
     csv_rows = []
 
@@ -248,8 +249,8 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
                 if(index - 1 >= 0):
                     prev_word = sentence[index - 1]
 
-                addAdjacentWordFeatures(feature_row, next_word, "next", candidate_adjacent_words)
-                addAdjacentWordFeatures(feature_row, prev_word, "prev", candidate_adjacent_words)
+                addAdjacentWordFeatures(feature_row, next_word, "next", succeeding_adj_words)
+                addAdjacentWordFeatures(feature_row, prev_word, "prev", preceeding_adj_words)
 
 
                 #logic for adding prefix and suffix features
@@ -337,7 +338,7 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
 
 
 #caller function to create feature rows for each file
-def getExamples(file, folder_path, candidate_adjacent_words, suffixes, prefixes):
+def getExamples(file, folder_path, preceeding_adj_words, succeeding_adj_words, suffixes, prefixes):
     file_path = folder_path + "/"+ file
 
 
@@ -359,7 +360,7 @@ def getExamples(file, folder_path, candidate_adjacent_words, suffixes, prefixes)
 
     file_ptr.close()
 
-    return createFeatureRows(sentences_words, candidate_adjacent_words, suffixes, prefixes, file_path)
+    return createFeatureRows(sentences_words, preceeding_adj_words, succeeding_adj_words, suffixes, prefixes, file_path)
 
 
 def generate_test_train_files(input_folder_path,output_file_path):
@@ -372,13 +373,18 @@ def generate_test_train_files(input_folder_path,output_file_path):
     #TODO: Find a better way to represent feature names if possible
     field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation", "contains_articles", "contains_pronouns"]
 
-    candidate_adj_words = ["a", "an", "the", "is", "are", "said", "was", "by", "from","at","in", "on"]
+    preceding_adj_words = ["a", "an", "the", "by", "from", "at", "in", "on"]
+    succeeding_adj_words = ["is", "says", "said", "was"]
+    #candidate_adj_words = ["a", "an", "the", "is", "are", "said", "was", "by", "from","at","in", "on"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
     prefixes = ["Mr", "Mr.", "Mrs", "Mrs.", "Lt"]
 
-    for adj_word in candidate_adj_words:
+    for adj_word in succeeding_adj_words:
         field_names.append("next_"+adj_word)
-        field_names.append("prev_"+adj_word)
+
+
+    for adj_word in preceding_adj_words:
+        field_names.append("prev_" + adj_word)
 
     for suffix in suffixes:
         field_names.append("suff_"+suffix)
@@ -393,7 +399,7 @@ def generate_test_train_files(input_folder_path,output_file_path):
 
     #writes features rows to csv output file
     for file in files:
-        csv_rows = getExamples(file, input_folder_path, candidate_adj_words, suffixes, prefixes)
+        csv_rows = getExamples(file, input_folder_path, preceding_adj_words, succeeding_adj_words, suffixes, prefixes)
         csv_writer.writerows(csv_rows)
 
     csv_file.close()
