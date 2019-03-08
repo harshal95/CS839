@@ -21,7 +21,7 @@ def printTruePositives(predicted_label, actual_label, test_input):
     for i in range(predicted_label.shape[0]):
         if(predicted_label[i] == 1 and actual_label[i] == 1):
             count = count + 1
-            print(test_input[i])
+            #print(test_input[i])
     #print(count)
     return count
 
@@ -41,7 +41,7 @@ def printFalseNegatives(predicted_label, actual_label, test_input):
     for i in range(predicted_label.shape[0]):
         if(predicted_label[i] == 0 and actual_label[i] == 1):
             count = count + 1
-            print(test_input[i])
+            #print(test_input[i])
     return count
 
 def countActualPositives(actual_label):
@@ -82,7 +82,7 @@ class Classifiers(object):
         self.stratiKsplit.get_n_splits(self.train_data_frame, self.actual_train_data_label)
 
     def decisionTree(self):
-        decTree = DecisionTreeClassifier()
+        decTree = DecisionTreeClassifier(random_state=1)
         
         precision_list = []
         recall_list = []
@@ -164,8 +164,8 @@ class Classifiers(object):
         print("\nMax Precision: "+ str(max(precision_list))+ "\nMax Recall: " + str(max(recall_list))+ "\nMax fscore: "+ str(max(fscore_list)) + "\n")
 
     def randomForest(self):
-        #randForest = RandomForestClassifier(random_state=1)
-        randForest = RandomForestClassifier()
+        randForest = RandomForestClassifier(random_state=1)
+        #randForest = RandomForestClassifier()
 
         precision_list = []
         recall_list = []
@@ -205,7 +205,7 @@ class Classifiers(object):
 
     def logisticRegression(self, penalty='l2', max_iter=10, *kwargs):
         #logReg = LogisticRegression(C = 100.0,random_state = 1)
-        logReg = LogisticRegression()
+        logReg = LogisticRegression(random_state=1)
 
         precision_list = []
         recall_list = []
@@ -282,7 +282,7 @@ class Classifiers(object):
         "\nFScore on Test Set: "+ str(fscore))
 
     def randomForest_on_test_set(self):
-        randForest = RandomForestClassifier()
+        randForest = RandomForestClassifier(random_state=1)
         randForest.fit(self.train_data, self.actual_train_data_label)
         predicted_label = randForest.predict(self.test_data)
 
@@ -292,10 +292,10 @@ class Classifiers(object):
         #printTruePositives(predicted_label, self.actual_test_data_label, self.test_input)
         #printFalsePositives(predicted_label, self.actual_test_data_label, self.test_input)
         #printFalseNegatives(predicted_label, self.actual_test_data_label, self.test_input)
-        '''
-        tp = printTruePositives(predicted_label=predicted_label, actual_label=self.actual_test_data_label)
-        fp = printFalsePositives(predicted_label=predicted_label, actual_label=self.actual_test_data_label)
-        fn = printFalseNegatives(predicted_label=predicted_label, actual_label=self.actual_test_data_label)
+        '''    
+        tp = printTruePositives(predicted_label=predicted_label, actual_label=self.actual_test_data_label, test_input=self.test_input)
+        fp = printFalsePositives(predicted_label=predicted_label, actual_label=self.actual_test_data_label, test_input=self.test_input)
+        fn = printFalseNegatives(predicted_label=predicted_label, actual_label=self.actual_test_data_label, test_input=self.test_input)
         precision = tp / (tp + fp)
         recall = tp / (tp + fn)
         fscore = 0
@@ -310,11 +310,11 @@ if __name__ == "__main__":
     test_t_file_path = "../datasets/test_harshal.csv"
     clf = Classifiers(train_file_path,test_t_file_path)
 
-    #clf.decisionTree()
-    #clf.linearRegression()
-    #clf.logisticRegression()
+    clf.decisionTree()
+    clf.linearRegression()
+    clf.logisticRegression()
     clf.randomForest()
     clf.supportVectorMachine()
     #clf.logisticRegression_on_test_set()
-    #clf.randomForest_on_test_set()
+    clf.randomForest_on_test_set()
 
