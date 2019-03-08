@@ -164,7 +164,7 @@ def containsCaps(curr_words):
     return 0
 
 def startWithRelation(curr_word):
-    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad"]
+    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad", "congressman", "sir"]
     input_word = curr_word.lower()
     if(input_word in relation_word_list):
         return 1
@@ -356,7 +356,7 @@ def generate_test_train_files(input_folder_path,output_file_path):
     #TODO: Find a better way to represent feature names if possible
     field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation"]
 
-    candidate_adj_words = ["is", "are", "said", "was", "by", "from","at","in", "on"]
+    candidate_adj_words = ["a", "the", "is", "are", "said", "was", "by", "from","at","in", "on"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
     prefixes = ["Mr", "Mr.", "Mrs", "Mrs.", "Lt"]
 
