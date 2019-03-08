@@ -73,7 +73,7 @@ def containsStrayCharacters(cur_gram_string):
         if(apostrophe in cur_gram_string[-2:]):
             input_string = cur_gram_string[:-2]
 
-    stray_chars =[':','\'', '-','\"',',','(',')']
+    stray_chars =[':','\'', '-','\"',',','(',')','%']
 
     for stray_char in stray_chars:
         if stray_char in input_string:
@@ -164,12 +164,27 @@ def containsCaps(curr_words):
     return 0
 
 def startWithRelation(curr_word):
-    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad", "congressman", "sir"]
+    relation_word_list = ["father", "mother", "brother", "general", "president", "vice", "secretary", "detective", "governor", "god", "first", "lord", "cinematographer", "director", "lady", "major", "captain", "miss", "st", "senator", "lt", "dad", "congressman", "sir", "fbi", "gov", "writer/director", "screenwriter", "constable"]
     input_word = curr_word.lower()
     if(input_word in relation_word_list):
         return 1
     return 0
 
+def containsArticles(cur_gram_list):
+    articles=["a", "an", "the"]
+    for cur_gram in cur_gram_list:
+        input_word = cur_gram.lower()
+        if(input_word in articles):
+            return 1
+    return 0
+
+def containsPronouns(cur_gram_list):
+    pronouns = ["i", "we", "my", "you", "it's", "he"]
+    for cur_gram in cur_gram_list:
+        input_word = cur_gram.lower()
+        if(input_word in pronouns):
+            return 1
+    return 0
 #function to create rows of features from words in a file
 def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefixes, file_path):
     n_grams = [1,2,3]
@@ -310,7 +325,8 @@ def createFeatureRows(sentence_words, candidate_adjacent_words, suffixes, prefix
                     feature_row["prev_capital_start"] = 0
 
 
-
+                feature_row["contains_articles"] = containsArticles(cur_gram_list)
+                feature_row["contains_pronouns"] = containsPronouns(cur_gram_list)
 
                 csv_rows.append(feature_row)
 
@@ -354,9 +370,9 @@ def generate_test_train_files(input_folder_path,output_file_path):
 
     #field names of the training dataset
     #TODO: Find a better way to represent feature names if possible
-    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation"]
+    field_names = ["input", "num_words","all_start_capital", "num_start_capital","surr_para","n1_word_tag","n2_word_tag","n3_word_tag","prev_word_tag","next_word_tag","all_caps", "next_capital_start", "prev_capital_start", "contains_stray","contains_caps", "starts_relation", "contains_articles", "contains_pronouns"]
 
-    candidate_adj_words = ["a", "the", "is", "are", "said", "was", "by", "from","at","in", "on"]
+    candidate_adj_words = ["a", "an", "the", "is", "are", "said", "was", "by", "from","at","in", "on"]
     suffixes = ["Sr", "Sr.", "Jr", "Jr.", "'s"]
     prefixes = ["Mr", "Mr.", "Mrs", "Mrs.", "Lt"]
 
