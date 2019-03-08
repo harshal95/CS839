@@ -83,12 +83,11 @@ class Classifiers(object):
 
     def decisionTree(self):
         decTree = DecisionTreeClassifier()
-        accuracy = 0
-        scores = []
-        pred = []
+        
         precision_list = []
         recall_list = []
         fscore_list = []
+        
         for train_index, test_index in self.stratiKsplit.split(self.train_data, self.actual_train_data_label):
             #Build a decision tree classifier from the training set (x, y).
             #x :The training input samples
@@ -127,9 +126,6 @@ class Classifiers(object):
         precision_list = []
         recall_list = []
         fscore_list = []
-        accuracy = 0
-        scores = []
-        pred = []
 
         for train_index, test_index in self.stratiKsplit.split(self.train_data, self.actual_train_data_label):
             #Build a decision tree classifier from the training set (x, y).
@@ -171,7 +167,6 @@ class Classifiers(object):
         #randForest = RandomForestClassifier(random_state=1)
         randForest = RandomForestClassifier()
 
-        accuracy = 0
         precision_list = []
         recall_list = []
         fscore_list = []
@@ -212,7 +207,6 @@ class Classifiers(object):
         #logReg = LogisticRegression(C = 100.0,random_state = 1)
         logReg = LogisticRegression()
 
-        accuracy = 0
         precision_list = []
         recall_list = []
         fscore_list = []
@@ -249,6 +243,25 @@ class Classifiers(object):
             fscore_list.append(fscore)
         # Should we take Max or take average? Note : we are passing average as macro.
         print("\nMax Precision: " + str(max(precision_list)) + "\nMax Recall: " + str(max(recall_list)) + "\nMax fscore: " + str(max(fscore_list)) + "\n")
+
+    def supportVectorMachine(self):
+        # its running very slow, hence increasing the cache size.
+        svc = SVC(cache_size=7000)
+        precision_list = []
+        recall_list = []
+        fscore_list = []
+
+        print ('Learning using Support Vector Machine')
+        for train_index, test_index in self.stratiKsplit.split(self.train_data, self.actual_train_data_label):
+            svc.fit(self.train_data[train_index],self.actual_train_data_label[train_index])
+            predicted_label = svc.predict(self.train_data[test_index])
+            precision,recall,fscore,support = precision_recall_fscore_support(self.actual_train_data_label[test_index], predicted_label, average='binary')
+            precision_list.append(precision)
+            recall_list.append(recall)
+            fscore_list.append(fscore)
+        # Should we take Max or take average? Note : we are passing average as macro.
+        print("\nMax Precision: " + str(max(precision_list)) + "\nMax Recall: " + str(max(recall_list)) + "\nMax fscore: " + str(max(fscore_list)) + "\n")
+
 
     def logisticRegression_on_test_set(self):
         logReg = LogisticRegression(C = 100.0, random_state=1)
@@ -297,10 +310,11 @@ if __name__ == "__main__":
     test_t_file_path = "../datasets/test_harshal.csv"
     clf = Classifiers(train_file_path,test_t_file_path)
 
-    clf.decisionTree()
-    clf.linearRegression()
-    clf.logisticRegression()
+    #clf.decisionTree()
+    #clf.linearRegression()
+    #clf.logisticRegression()
     clf.randomForest()
-    clf.logisticRegression_on_test_set()
-    clf.randomForest_on_test_set()
+    clf.supportVectorMachine()
+    #clf.logisticRegression_on_test_set()
+    #clf.randomForest_on_test_set()
 
