@@ -28,11 +28,18 @@ def printTruePositives(predicted_label, actual_label, test_input):
 def printFalsePositives(predicted_label, actual_label, test_input):
     count = 0
     #print("printing false positives..")
+    for i, row in enumerate(test_input):
+        if(predicted_label[i] == 1 and actual_label[i] == 0):
+            count = count + 1
+            print(row)
+
+    '''
     for i in range(predicted_label.shape[0]):
         if (predicted_label[i] == 1 and actual_label[i] == 0):
             count = count + 1
             print(test_input[i])
     #print(count)
+    '''
     return count
 
 def printFalseNegatives(predicted_label, actual_label, test_input):
@@ -179,12 +186,16 @@ class Classifiers(object):
 
             #predict lables for samples in test fold (test_index.
             predicted_label = randForest.predict(self.train_data[test_index])
+            actual_label = self.actual_train_data_label[test_index]
+            #printFalsePositives(predicted_label, actual_label, self.train_input[test_index])
 
             #now compute precision,recall and fscore using original actual train data label against predicted label
             # F-score  is a measure of a test's accuracy
             #Support :The number of occurrences of each label in actual_train_data_label
             #average = macro ->the recall, precision and f1 for all classes are computed individually and then their mean is returned. 
             precision,recall,fscore,support = precision_recall_fscore_support(self.actual_train_data_label[test_index], predicted_label, average='binary')
+            #print("Precision:", str(precision))
+            #print("-------------------------------------------------------------------")
             '''
             tp = printTruePositives(predicted_label=predicted_label,
                                     actual_label=self.actual_train_data_label[test_index])
@@ -314,7 +325,7 @@ if __name__ == "__main__":
     clf.linearRegression()
     clf.logisticRegression()
     clf.randomForest()
-    clf.supportVectorMachine()
+    #clf.supportVectorMachine()
     #clf.logisticRegression_on_test_set()
     clf.randomForest_on_test_set()
 
