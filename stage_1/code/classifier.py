@@ -102,13 +102,10 @@ class Classifiers(object):
 
             decTree.fit(self.train_data[train_index],self.actual_train_data_label[train_index])
 
-            #predict lables for samples in test fold (test_index.
+            #predict lables for samples in test fold (test_index).
             predicted_label = decTree.predict(self.train_data[test_index])
 
-            #now compute precision,recall and fscore using original actual train data label against predicted label
-            # F-score  is a measure of a test's accuracy
-            #Support :The number of occurrences of each label in actual_train_data_label
-            #average = macro ->the recall, precision and f1 for all classes are computed individually and then their mean is returned. 
+            #compute precision,recall and fscore using original actual train data label against predicted label
             precision,recall,fscore,support = precision_recall_fscore_support(self.actual_train_data_label[test_index], predicted_label, average='binary')
             '''
             tp = printTruePositives(predicted_label= predicted_label,actual_label= self.actual_train_data_label[test_index])
@@ -120,7 +117,6 @@ class Classifiers(object):
             precision_list.append(precision)
             recall_list.append(recall)
             fscore_list.append(fscore)
-        # Should we take Max or take average? Note : we are passing average as macro.
         print("DecisionTree Classifier")
         print("\nMax Precision: "+ str(max(precision_list))+ "\nMax Recall: " + str(max(recall_list))+ "\nMax fscore: "+ str(max(fscore_list)) + "\n")
 
@@ -141,16 +137,13 @@ class Classifiers(object):
 
             linReg.fit(self.train_data[train_index],self.actual_train_data_label[train_index])
 
-            #predict lables for samples in test fold (test_index.
+            #predict lables for samples in test fold (test_index).
             predicted_label = linReg.predict(self.train_data[test_index])
 
             threshold = round(np.mean(predicted_label), 2)
             predicted_label = np.where(predicted_label > threshold, 1, 0)
 
-            #now compute precision,recall and fscore using original actual train data label against predicted label
-            # F-score  is a measure of a test's accuracy
-            #Support :The number of occurrences of each label in actual_train_data_label
-            #average = macro ->the recall, precision and f1 for all classes are computed individually and then their mean is returned. 
+            #compute precision,recall and fscore using original actual train data label against predicted label
             precision,recall,fscore,support = precision_recall_fscore_support(self.actual_train_data_label[test_index], predicted_label, average='binary')
             '''
             tp = printTruePositives(predicted_label=predicted_label,
@@ -166,7 +159,6 @@ class Classifiers(object):
             recall_list.append(recall)
             fscore_list.append(fscore)
 
-        # Should we take Max or take average? Note : we are passing average as macro.
         print("Linear Regression Classifier")
         print("\nMax Precision: "+ str(max(precision_list))+ "\nMax Recall: " + str(max(recall_list))+ "\nMax fscore: "+ str(max(fscore_list)) + "\n")
 
@@ -189,10 +181,7 @@ class Classifiers(object):
             actual_label = self.actual_train_data_label[test_index]
             #printFalsePositives(predicted_label, actual_label, self.train_input[test_index])
 
-            #now compute precision,recall and fscore using original actual train data label against predicted label
-            # F-score  is a measure of a test's accuracy
-            #Support :The number of occurrences of each label in actual_train_data_label
-            #average = macro ->the recall, precision and f1 for all classes are computed individually and then their mean is returned. 
+            #compute precision,recall and fscore using original actual train data label against predicted label
             precision,recall,fscore,support = precision_recall_fscore_support(self.actual_train_data_label[test_index], predicted_label, average='binary')
             #print("Precision:", str(precision))
             #print("-------------------------------------------------------------------")
@@ -209,7 +198,6 @@ class Classifiers(object):
             precision_list.append(precision)
             recall_list.append(recall)
             fscore_list.append(fscore)
-        # Should we take Max or take average? Note : we are passing average as macro.
         print("Random Forest Classifier")
         print("\nMax Precision: " + str(max(precision_list)) + "\nMax Recall: " + str(max(recall_list)) + "\nMax fscore: " + str(max(fscore_list)) + "\n")
 
@@ -234,10 +222,8 @@ class Classifiers(object):
             predicted_label = logReg.predict(self.train_data[test_index])
 
     
-            #now compute precision,recall and fscore using original actual train data label against predicted label
-            # F-score  is a measure of a test's accuracy
-            #Support :The number of occurrences of each label in actual_train_data_label
-            #average = macro ->the recall, precision and f1 for all classes are computed individually and then their mean is returned. 
+            #compute precision,recall and fscore using original actual train data label against predicted label
+            # F-score  is a measure of a test's accuracy 
             precision,recall,fscore,support = precision_recall_fscore_support(self.actual_train_data_label[test_index], predicted_label, average='binary')
             '''
             tp = printTruePositives(predicted_label=predicted_label,
@@ -325,7 +311,7 @@ if __name__ == "__main__":
     #clf.linearRegression()
     #clf.logisticRegression()
     clf.randomForest()
-    #clf.supportVectorMachine()
-    #clf.logisticRegression_on_test_set()
+    clf.supportVectorMachine()
+    clf.logisticRegression_on_test_set()
     clf.randomForest_on_test_set()
 
