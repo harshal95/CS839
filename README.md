@@ -6,7 +6,7 @@
  
 ### Stage-1: Information Extraction from natural text
 * [Set B](https://github.com/harshal95/CS839/tree/master/stage_1/set-B)
-  * README
+  * [README](https://github.com/harshal95/CS839/tree/master/stage_1/set-B/README.md)
 * [Set I](https://github.com/harshal95/CS839/tree/master/stage_1/set-I)
 * [Set J](https://github.com/harshal95/CS839/tree/master/stage_1/set-J)
 * [Source code](https://github.com/harshal95/CS839/tree/master/stage_1/code)
