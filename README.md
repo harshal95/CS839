@@ -10,6 +10,6 @@
 * [Set I](https://github.com/harshal95/CS839/tree/master/stage_1/set-I)
 * [Set J](https://github.com/harshal95/CS839/tree/master/stage_1/set-J)
 * [Source code](https://github.com/harshal95/CS839/tree/master/stage_1/code)
-* Compressed file
+* [Compressed file](https://github.com/harshal95/CS839/tree/master/stage_1/code/compressed_file.zip)
 * [Stage 1 Report](https://github.com/harshal95/CS839/tree/master/stage_1/Stage1-Report.pdf)
 
