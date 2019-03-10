@@ -1,0 +1,465 @@
+{
+    "DT": {
+        "No": {
+            "count": 1
+        },
+        "The": {
+            "count": 1
+        }
+    },
+    "IN": {
+        "If": {
+            "count": 1
+        }
+    },
+    "JJ": {
+        "All American": {
+            "count": 1
+        },
+        "Catholic": {
+            "count": 1
+        },
+        "English": {
+            "count": 1
+        },
+        "Famous": {
+            "count": 1
+        },
+        "Hasidic": {
+            "count": 1
+        },
+        "Larry King Live": {
+            "count": 1
+        },
+        "Typical": {
+            "count": 1
+        },
+        "Western": {
+            "count": 2
+        }
+    },
+    "MD": {
+        "Could": {
+            "count": 1
+        }
+    },
+    "NN": {
+        "Agent Edgar Clenteen": {
+            "count": 1
+        },
+        "Arizona": {
+            "count": 1
+        },
+        "Artemisia's": {
+            "count": 1
+        },
+        "Assisi": {
+            "count": 1
+        },
+        "Audience's": {
+            "count": 1
+        },
+        "Brooklyn": {
+            "count": 1
+        },
+        "Burton's": {
+            "count": 1
+        },
+        "Called Andre": {
+            "count": 1
+        },
+        "Century": {
+            "count": 1
+        },
+        "Christian Science": {
+            "count": 1
+        },
+        "Christmas": {
+            "count": 2
+        },
+        "Cliche": {
+            "count": 1
+        },
+        "Constable Ichabod Crane": {
+            "count": 1
+        },
+        "Costner": {
+            "count": 1
+        },
+        "Costner's": {
+            "count": 1
+        },
+        "Cub's": {
+            "count": 1
+        },
+        "Davis": {
+            "count": 2
+        },
+        "Depp": {
+            "count": 1
+        },
+        "Diane Keaton": {
+            "count": 1
+        },
+        "Disney": {
+            "count": 6
+        },
+        "Disney's": {
+            "count": 3
+        },
+        "Dollar Man": {
+            "count": 1
+        },
+        "Dr David": {
+            "count": 1
+        },
+        "Dr Martha": {
+            "count": 1
+        },
+        "Dr Nathan": {
+            "count": 1
+        },
+        "East Coast": {
+            "count": 1
+        },
+        "Eastern Europe": {
+            "count": 1
+        },
+        "Emily Bradford": {
+            "count": 1
+        },
+        "Excuse": {
+            "count": 1
+        },
+        "Ferraris": {
+            "count": 1
+        },
+        "Freddie's": {
+            "count": 1
+        },
+        "Frederick Edwin": {
+            "count": 1
+        },
+        "GRAY'S": {
+            "count": 2
+        },
+        "Georgian Princess": {
+            "count": 1
+        },
+        "Grant": {
+            "count": 1
+        },
+        "Headless Horseman": {
+            "count": 2
+        },
+        "Hitler Youth": {
+            "count": 1
+        },
+        "Imagine": {
+            "count": 1
+        },
+        "It's": {
+            "count": 1
+        },
+        "Joey's": {
+            "count": 1
+        },
+        "Jon Turteltaub": {
+            "count": 1
+        },
+        "Leave It": {
+            "count": 1
+        },
+        "Lou's": {
+            "count": 1
+        },
+        "MIRACLE": {
+            "count": 1
+        },
+        "Macy's": {
+            "count": 1
+        },
+        "Michael Goetz": {
+            "count": 1
+        },
+        "Michael's": {
+            "count": 1
+        },
+        "Mild": {
+            "count": 1
+        },
+        "Million Dollar Man": {
+            "count": 1
+        },
+        "NIGHTMARE": {
+            "count": 1
+        },
+        "New Eldorado": {
+            "count": 1
+        },
+        "New England": {
+            "count": 2
+        },
+        "New York": {
+            "count": 1
+        },
+        "New York City's": {
+            "count": 1
+        },
+        "North Ireland": {
+            "count": 1
+        },
+        "Northern Ireland": {
+            "count": 3
+        },
+        "Pandora's": {
+            "count": 1
+        },
+        "Paraguay": {
+            "count": 1
+        },
+        "Poor Martin": {
+            "count": 1
+        },
+        "Postman's": {
+            "count": 1
+        },
+        "Prime Minister": {
+            "count": 1
+        },
+        "Racism": {
+            "count": 1
+        },
+        "Roman": {
+            "count": 1
+        },
+        "Russ": {
+            "count": 1
+        },
+        "Saint Francis": {
+            "count": 1
+        },
+        "Seal Called Andre": {
+            "count": 1
+        },
+        "Set": {
+            "count": 1
+        },
+        "Seth": {
+            "count": 1
+        },
+        "Silicon Valley": {
+            "count": 1
+        },
+        "Sleepy Hollow": {
+            "count": 1
+        },
+        "Small Pox": {
+            "count": 1
+        },
+        "St. Nick": {
+            "count": 1
+        },
+        "Superglue": {
+            "count": 1
+        },
+        "Tbilisi": {
+            "count": 1
+        },
+        "Tehran's": {
+            "count": 1
+        },
+        "Thanksgiving Day": {
+            "count": 1
+        },
+        "The Legend": {
+            "count": 1
+        },
+        "Tighter": {
+            "count": 1
+        },
+        "Time": {
+            "count": 1
+        },
+        "Tomahawk Casino": {
+            "count": 1
+        },
+        "Urban Folk": {
+            "count": 1
+        },
+        "Wang": {
+            "count": 1
+        },
+        "Watch": {
+            "count": 1
+        },
+        "World War II": {
+            "count": 1
+        },
+        "York City's": {
+            "count": 1
+        },
+        "on Andrew": {
+            "count": 1
+        }
+    },
+    "NNP": {
+        "America": {
+            "count": 1
+        },
+        "Anton": {
+            "count": 1
+        },
+        "Broadway": {
+            "count": 1
+        },
+        "California": {
+            "count": 1
+        },
+        "Detroit": {
+            "count": 1
+        },
+        "Dr Megan": {
+            "count": 1
+        },
+        "Gay Hamilton": {
+            "count": 1
+        },
+        "George": {
+            "count": 1
+        },
+        "Grosse Pointe": {
+            "count": 1
+        },
+        "Katrina Van": {
+            "count": 1
+        },
+        "March": {
+            "count": 1
+        },
+        "Paris": {
+            "count": 1
+        },
+        "Richard": {
+            "count": 1
+        },
+        "South": {
+            "count": 1
+        },
+        "Steve": {
+            "count": 1
+        },
+        "Street": {
+            "count": 1
+        },
+        "The Chamber": {
+            "count": 1
+        },
+        "United": {
+            "count": 1
+        },
+        "Washington": {
+            "count": 1
+        }
+    },
+    "NNS": {
+        "Academy Awards": {
+            "count": 1
+        },
+        "Boys": {
+            "count": 1
+        },
+        "Chicago Cubs": {
+            "count": 1
+        },
+        "Discoverer Troops": {
+            "count": 1
+        },
+        "Hasidic Jews": {
+            "count": 1
+        },
+        "Hasidics": {
+            "count": 1
+        },
+        "Italians": {
+            "count": 1
+        },
+        "Powhatans": {
+            "count": 1
+        },
+        "Santas": {
+            "count": 1
+        },
+        "Stiers": {
+            "count": 1
+        },
+        "Theatrics": {
+            "count": 1
+        },
+        "Three Stooges": {
+            "count": 1
+        },
+        "United States": {
+            "count": 1
+        },
+        "Urban Folk Tales": {
+            "count": 1
+        }
+    },
+    "PRP": {
+        "We": {
+            "count": 4
+        },
+        "You": {
+            "count": 1
+        }
+    },
+    "PRP$": {
+        "My": {
+            "count": 1
+        }
+    },
+    "RB": {
+        "Academy Award": {
+            "count": 6
+        },
+        "Instead": {
+            "count": 1
+        },
+        "Just": {
+            "count": 1
+        },
+        "Smith Kelly": {
+            "count": 1
+        },
+        "Whereas Nelly": {
+            "count": 1
+        }
+    },
+    "RBR": {
+        "Better": {
+            "count": 1
+        }
+    },
+    "UH": {
+        "Oh": {
+            "count": 1
+        }
+    },
+    "VB": {
+        "Get": {
+            "count": 1
+        },
+        "San Jose": {
+            "count": 1
+        }
+    },
+    "VBG": {
+        "Spalding": {
+            "count": 1
+        },
+        "Washington Irving": {
+            "count": 1
+        }
+    }
+}

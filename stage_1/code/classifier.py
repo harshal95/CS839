@@ -321,9 +321,9 @@ if __name__ == "__main__":
     test_t_file_path = "../datasets/test_harshal.csv"
     clf = Classifiers(train_file_path,test_t_file_path)
 
-    clf.decisionTree()
-    clf.linearRegression()
-    clf.logisticRegression()
+    #clf.decisionTree()
+    #clf.linearRegression()
+    #clf.logisticRegression()
     clf.randomForest()
     #clf.supportVectorMachine()
     #clf.logisticRegression_on_test_set()
