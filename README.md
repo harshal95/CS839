@@ -5,11 +5,11 @@
 * Sankarshan Umesh Bhat (sbhat6@wisc.edu)
  
 ### Stage-1: Information Extraction from natural text
-* Dataset
+* [Set B](https://github.com/harshal95/CS839/tree/master/stage_1/set-B)
   * README
-* Set I
-* Set J
-* [Source code](stage_1/code)
+* [Set I](https://github.com/harshal95/CS839/tree/master/stage_1/set-I)
+* [Set J](https://github.com/harshal95/CS839/tree/master/stage_1/set-J)
+* [Source code](https://github.com/harshal95/CS839/tree/master/stage_1/code)
 * Compressed file
-* [Stage 1 Documents](stage_1/train_markedup_docs)
+* [Stage 1 Documents](https://github.com/harshal95/CS839/tree/master/stage_1/Stage1-Report.pdf)
 
