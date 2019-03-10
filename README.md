@@ -11,5 +11,5 @@
 * [Set J](https://github.com/harshal95/CS839/tree/master/stage_1/set-J)
 * [Source code](https://github.com/harshal95/CS839/tree/master/stage_1/code)
 * Compressed file
-* [Stage 1 Documents](https://github.com/harshal95/CS839/tree/master/stage_1/Stage1-Report.pdf)
+* [Stage 1 Report](https://github.com/harshal95/CS839/tree/master/stage_1/Stage1-Report.pdf)
 
