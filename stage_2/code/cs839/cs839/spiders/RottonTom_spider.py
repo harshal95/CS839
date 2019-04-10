@@ -3,7 +3,7 @@ import scrapy
 
 
 class RottombotSpider(scrapy.Spider):
-	name = 'rottombot'
+	name = 'RottenTomatoes'
 	allowed_domains = ['www.rottentomatoes.com']
 	#start_urls = ['https://www.rottentomatoes.com/top/bestofrt/?year=2018']
 
@@ -12,8 +12,7 @@ class RottombotSpider(scrapy.Spider):
 		'https://www.rottentomatoes.com/top/bestofrt/?year='
 		]
 		for url in urls:
-			year = 1980
-			for year in range(1920, 2019):
+			for year in range(1910, 2020):
 				current_url = url + str(year)
 				yield scrapy.Request(url=current_url, callback=self.parse)
 
