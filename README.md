@@ -13,3 +13,10 @@
 * [Compressed file](https://github.com/harshal95/CS839/tree/master/stage_1/compressed_file.zip)
 * [Stage 1 Report](https://github.com/harshal95/CS839/tree/master/stage_1/Stage1-Report.pdf)
 
+### Stage-2: Crawling and Extracting Structured data from web-pages
+* [Data](https://github.com/harshal95/CS839/tree/master/stage_2/data)
+* [Source code](https://github.com/harshal95/CS839/tree/master/stage_2/code/cs839)
+* [Report]()
+
+
+
