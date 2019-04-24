@@ -18,6 +18,11 @@
 * [Source code](https://github.com/harshal95/CS839/tree/master/stage_2/code/cs839)
 * [Report](https://github.com/harshal95/CS839/blob/master/stage_2/Stage%202%20-%20Report.pdf)
 
+### Stage-3: Entity-matching
+#### Matching Fodors and Zagats
+* UserId: Avengers
+* ProjectId: endgame
+* [Screenshot]()
 
 
 
