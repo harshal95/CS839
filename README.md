@@ -24,9 +24,12 @@
 * ProjectId: endgame
 * [Screenshot](https://github.com/harshal95/CS839/blob/master/Sample_Data_set_Cloud_Matcher_output.png)
 
-#### Blocking rules
+#### Blocking Results
 * UserId: Avengers
 * ProjectId: MoviesMatcher
 * [Screenshot](https://github.com/harshal95/CS839/blob/master/Learned_Blocking_Rules.png)
 
-
+#### Matching Results
+* UserId: Avengers
+* ProjectId: MoviesMatcher
+* [Screenshot](https://github.com/harshal95/CS839/blob/master/match_results_all_ds_839.JPG)
