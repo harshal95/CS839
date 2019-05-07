@@ -16,7 +16,20 @@
 ### Stage-2: Crawling and Extracting Structured data from web-pages
 * [Data](https://github.com/harshal95/CS839/tree/master/stage_2/data)
 * [Source code](https://github.com/harshal95/CS839/tree/master/stage_2/code/cs839)
-* [Report]()
+* [Report](https://github.com/harshal95/CS839/blob/master/stage_2/Stage%202%20-%20Report.pdf)
 
+### Stage-3: Entity-matching
+#### Matching Fodors and Zagats
+* UserId: Avengers
+* ProjectId: endgame
+* [Screenshot](https://github.com/harshal95/CS839/blob/master/Sample_Data_set_Cloud_Matcher_output.png)
 
+#### Blocking Results
+* UserId: Avengers
+* ProjectId: MoviesMatcher
+* [Screenshot](https://github.com/harshal95/CS839/blob/master/Learned_Blocking_Rules.png)
 
+#### Matching Results
+* UserId: Avengers
+* ProjectId: MoviesMatcher
+* [Screenshot](https://github.com/harshal95/CS839/blob/master/match_results_all_ds_839.JPG)
