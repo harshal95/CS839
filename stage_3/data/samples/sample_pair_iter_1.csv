@@ -1,51 +1,51 @@
-,ltable.Certificate,ltable.Director,ltable.Genre,ltable.Grossing,ltable.Name,ltable.Rating,ltable.ReleaseDate,ltable.Runtime,ltable.Up_System,ltable._id,rtable.Certificate,rtable.Director,rtable.Genre,rtable.Grossing,rtable.Name,rtable.Rating,rtable.ReleaseDate,rtable.Runtime,rtable.Up_System,rtable._id
-0,Passed,Michael Curtiz,"Crime, Mystery",,The Kennel Murder Case,7.0,28 October 1933 (USA),73 min,CM,2406,,,,,The House of Mirth,3.5/5,,,CM,698
-1,R,Joe Dante,Horror,"$17,986,000",The Howling,6.6,10 April 1981 (USA),91 min,CM,1308,,,,,On the Basis of Sex,3.6/5,,,CM,2140
-2,PG,Steven Spielberg,"Crime, Drama","$7,500,000",The Sugarland Express,6.8,29 May 1974 (Sweden),110 min,CM,1129,,,,,Chavez: Inside the Coup,4.2/5,,,CM,2665
-3,Not Rated,"Lotte Reiniger, Carl Koch","Animation, Adventure, Fantasy",,The Adventures of Prince Achmed,7.8,1928 (Italy),66 min,CM,2531,,,,,The Wind,3/5,,,CM,2133
-4,R,Martin Scorsese,"Drama, Sport","$52,293,982",The Color of Money,7.0,17 October 1986 (USA),119 min,CM,1483,,,,,The Hummingbird Project,3.5/5,,,CM,2107
-5,R,"Lana Wachowski, Lilly Wachowski","Action, Sci-Fi",,The Matrix Reloaded,7.2,15 May 2003 (USA),138 min,CM,129,R,"Lana Wachowski,Lilly Wachowski","Mystery & Suspense,Science Fiction & Fantasy","$281,500,000",The Matrix Reloaded,3.4/5,"May 7, 2003",138 minutes,CM,2580
-6,Approved,"James Algar, Clyde Geronimi, 1 more credit","Animation, Comedy, Family",,The Adventures of Ichabod and Mr. Toad,7.1,6 January 1950 (USA),68 min,CM,2161,,,,,The Brink,4.8/5,,,CM,2151
-7,PG-13,Paul Greengrass,"Action, Mystery, Thriller",,The Bourne Ultimatum,8.0,3 August 2007 (USA),115 min,CM,196,PG-13,Paul Greengrass,"Action & Adventure,Drama,Mystery & Suspense","$227,400,000",The Bourne Ultimatum,4.1/5,"Aug 3, 2007",115 minutes,CM,2771
-8,Not Rated,Alexander Mackendrick,"Comedy, Crime",,The Ladykillers,7.8,24 February 1956 (Belgium),91 min,CM,2392,,,,,The Endurance,3.8/5,,,CM,953
-9,Not Rated,Mikhail Kalatozov,"Drama, Romance, War",,The Cranes Are Flying,8.3,21 March 1960 (USA),95 min,CM,1561,,,,,The Best of Enemies,4/5,,,CM,2102
-10,Not Rated,Yasujir Ozu,Drama,,The Only Son,7.8,1 April 1987 (USA),87 min,CM,2829,,,,,The Mustang,3.9/5,,,CM,2158
-11,Not Rated,"Lewis Milestone, Carol Reed","Adventure, Drama, History","$13,680,000",Mutiny on the Bounty,7.3,8 November 1962 (USA),178 min,CM,1696,,,,,Elevator to the Gallows (Ascenseur pour l'chafaud),4.2/5,,,CM,156
-12,Approved,Lloyd Bacon,"Comedy, Crime",,A Slight Case of Murder,7.1,5 March 1938 (USA),85 min,CM,2853,,,,,On the Basis of Sex,3.6/5,,,CM,2140
-13,Not Rated,Joseph L. Mankiewicz,Drama,,All About Eve,8.3,27 October 1950 (USA),138 min,CM,2309,NR,Steven Soderbergh,Drama,,High Flying Bird,3.2/5,,90 minutes,CM,2163
-14,Not Rated,"Jean Cocteau, Ren Clment","Drama, Fantasy, Romance","$298,718",Beauty and the Beast,8.0,23 December 1947 (USA),96 min,CM,2129,,,,,The Best of Enemies,4/5,,,CM,2102
-15,R,Jane Campion,"Drama, Music, Romance","$40,158,000",The Piano,7.6,11 February 1994 (USA),121 min,CM,798,,,,,The Death of Mr. Lazarescu,3.8/5,,,CM,1563
-16,R,Sergio Leone,Western,"$6,100,000","The Good, the Bad and the Ugly",8.9,29 December 1967 (USA),161 min,CM,1508,,,,,Girl on the Bridge (La Fille sur le Pont),4.1/5,,,CM,814
-17,Not Rated,Harold Young,"Adventure, Drama",,The Scarlet Pimpernel,7.5,7 February 1935 (USA),97 min,CM,2721,,,,,The Last Seduction,3.6/5,,,CM,1204
-18,TV-PG,William Worthington,"Drama, Romance",,The Dragon Painter,6.2,28 September 1919 (USA),50 min,CM,2926,,,,,The Dangerous Lives of Altar Boys,3.6/5,,,CM,388
-19,PG,Robert Zemeckis,"Action, Adventure, Comedy","$76,572,238",Romancing the Stone,6.9,30 March 1984 (USA),106 min,CM,1422,,,,,The Abyss,3.5/5,,,CM,1273
-20,R,Hal Ashby,"Comedy, Drama",,The Last Detail,7.6,15 February 1974 (USA),104 min,CM,1040,,,,,The Mustang,3.9/5,,,CM,2158
-21,Passed,Fred Niblo,"Drama, Romance","$543,000",The Mysterious Lady,7.3,4 August 1928 (USA),96 min,CM,2625,,,,,The Prodigy,3/5,,,CM,2095
-22,Not Rated,Alfred Hitchcock,"Crime, Drama, Mystery",,The Lodger: A Story of the London Fog,7.3,14 February 1927 (UK),74 min,CM,2621,,,,,The Abyss,3.5/5,,,CM,1273
-23,Approved,Sidney Lanfield,"Horror, Mystery, Thriller",,The Hound of the Baskervilles,7.6,31 March 1939 (USA),80 min,CM,2008,,,,,The Endurance,3.8/5,,,CM,953
-24,Not Rated,F.W. Murnau,"Drama, Romance, Adventure",,Tabu: A Story of the South Seas,7.6,1 August 1931 (USA),86 min,CM,2785,,,,,The Endurance,3.8/5,,,CM,953
-25,PG,John Guillermin,"Crime, Drama, Mystery",,Death on the Nile,7.3,29 September 1978 (USA),140 min,CM,1338,,,,,The Image Book (Le livre d'image),2.9/5,,,CM,2159
-26,R,Wolfgang Petersen,"Drama, History",,Troy,7.2,14 May 2004 (USA),163 min,CM,151,R,Lee Tamahori,Drama,,Once Were Warriors,4.1/5,,99 minutes,CM,1212
-27,Approved,Mervyn LeRoy,"Crime, Drama, Horror",,The Bad Seed,7.5,12 September 1956 (USA),129 min,CM,1530,,,,,Ghost in the Shell,4/5,,,CM,1059
-28,Not Rated,John Sturges,"Adventure, Drama, History","$12,100,000",The Great Escape,8.2,4 July 1963 (USA),172 min,CM,1783,,,,,Girl on the Bridge (La Fille sur le Pont),4.1/5,,,CM,814
-29,PG,Shawn Levy,"Adventure, Comedy, Family",,Night at the Museum,6.4,22 December 2006 (USA),108 min,CM,228,,,,,The Prodigy,3/5,,,CM,2095
-30,PG,Nicholas Meyer,"Action, Adventure, Sci-Fi","$74,888,996",Star Trek VI: The Undiscovered Country,7.2,6 December 1991 (USA),110 min,CM,623,PG,Nicholas Meyer,"Action & Adventure,Mystery & Suspense,Science Fiction & Fantasy",,Star Trek VI - The Undiscovered Country,3.5/5,"Dec 3, 1991",109 minutes,CM,1335
-31,PG,Steven Spielberg,"Drama, History, War","$22,238,696",Empire of the Sun,7.8,25 December 1987 (USA),153 min,CM,599,,,,,The Circle (Dayereh),3.7/5,,,CM,929
-32,R,Peter Bogdanovich,Drama,"$29,133,000",The Last Picture Show,8.1,22 October 1971 (USA),118 min,CM,1114,,,,,The Beach Bum,2.2/5,,,CM,2109
-33,Not Rated,"Fred Niblo, Charles Brabin, 3 more credits","Adventure, Drama, Romance","$12,449,980",Ben-Hur: A Tale of the Christ,8.0,8 October 1927 (USA),143 min,CM,2498,NR,Susan Johnson,"Drama,Romance",,To All the Boys I've Loved Before,4.4/5,,120 minutes,CM,2202
-34,PG-13,Marc Webb,"Action, Adventure, Sci-Fi","$202,853,933",The Amazing Spider-Man 2,6.6,2 May 2014 (USA),142 min,CM,408,,,,,The Wedding Guest,3.7/5,,,CM,2096
-35,Approved,Mark Robson,"Drama, Horror, Mystery",,The Seventh Victim,6.9,21 August 1943 (USA),71 min,CM,1922,,,,,The LEGO Movie 2: The Second Part,3.7/5,,,CM,2173
-36,Approved,Henry King,"Biography, Drama",,The Song of Bernadette,7.7,April 1945 (USA),156 min,CM,1924,,,,,The Circle (Dayereh),3.7/5,,,CM,929
-37,PG,Michael Gracey,"Biography, Drama, Musical","$174,340,174",The Greatest Showman,7.6,20 December 2017 (USA),105 min,CM,460,,,,,The Wind,3/5,,,CM,2133
-38,PG-13,John Frankenheimer,"Drama, Thriller",,The Manchurian Candidate,8.0,24 October 1962 (USA),126 min,CM,1719,,,,,The Upside,4.2/5,,,CM,2108
-39,PG-13,Stephen Chbosky,Drama,,The Perks of Being a Wallflower,8.0,12 October 2012 (USA),103 min,CM,440,,,,,The Image Book (Le livre d'image),2.9/5,,,CM,2159
-40,Approved,"John Cromwell, W.S. Van Dyke","Adventure, Drama, Romance",,The Prisoner of Zenda,7.7,3 September 1937 (USA),101 min,CM,2889,,,,,Three Days of the Condor,3.8/5,,,CM,293
-41,G,Robert Wise,"Sci-Fi, Thriller",,The Andromeda Strain,7.2,12 March 1971 (USA),131 min,CM,1109,,,,,The LEGO Movie 2: The Second Part,3.7/5,,,CM,2173
-42,Not Rated,Sidney Lumet,Drama,"$4,360,000",12 Angry Men,8.9,10 April 1957 (USA),96 min,CM,1576,NR,Sidney Lumet,"Classics,Drama",,12 Angry Men (Twelve Angry Men),4.2/5,"Apr 13, 1957",95 minutes,CM,160
-43,Approved,Robert Wise,"Horror, Thriller",,The Body Snatcher,7.4,October 1945 (UK),77 min,CM,2069,,,,,The Best of Enemies,4/5,,,CM,2102
-44,R,Michael Bay,"Action, Adventure, Thriller","$134,069,511",The Rock,7.4,7 June 1996 (USA),136 min,CM,870,,,,,Ghost in the Shell,4/5,,,CM,1059
-45,Approved,Stanley Kramer,"Drama, Romance, Sci-Fi","$11,000,000",On the Beach,7.2,17 December 1959 (USA),134 min,CM,1589,,,,,The Wild Pear Tree (Ahlat agaci),4/5,,,CM,2162
-46,Unrated,Henry Koster,"Drama, History","$36,000,000",The Robe,6.8,4 December 1953 (France),135 min,CM,2321,,,,,The Five Obstructions,3.9/5,,,CM,2631
-47,R,Kathryn Bigelow,"Drama, Thriller, War",,The Hurt Locker,7.6,31 July 2009 (USA),131 min,CM,273,,,,,The Brink,4.8/5,,,CM,2151
-48,Not Rated,Raoul Walsh,"Adventure, Family, Fantasy","$4,360,000",The Thief of Bagdad,7.8,11 April 1924 (Brazil),155 min,CM,2560,,,,,The Wild Pear Tree (Ahlat agaci),4/5,,,CM,2162
-49,PG,Michael Ritchie,"Comedy, Drama",,The Candidate,7.1,11 August 1972 (Ireland),110 min,CM,980,,,,,Donnie Darko: The Director's Cut,4.2/5,,,CM,3012
+correct_label,,ltable.Certificate,ltable.Director,ltable.Genre,ltable.Grossing,ltable.Name,ltable.Rating,ltable.ReleaseDate,ltable.Runtime,ltable.Up_System,ltable._id,rtable.Certificate,rtable.Director,rtable.Genre,rtable.Grossing,rtable.Name,rtable.Rating,rtable.ReleaseDate,rtable.Runtime,rtable.Up_System,rtable._id
+0,0,Passed,Michael Curtiz,"Crime, Mystery",,The Kennel Murder Case,7,28 October 1933 (USA),73 min,CM,2406,,,,,The House of Mirth,3.5/5,,,CM,698
+0,1,R,Joe Dante,Horror,"$17,986,000 ",The Howling,6.6,10 April 1981 (USA),91 min,CM,1308,,,,,On the Basis of Sex,3.6/5,,,CM,2140
+0,2,PG,Steven Spielberg,"Crime, Drama","$7,500,000 ",The Sugarland Express,6.8,29 May 1974 (Sweden),110 min,CM,1129,,,,,Chavez: Inside the Coup,4.2/5,,,CM,2665
+0,3,Not Rated,"Lotte Reiniger, Carl Koch","Animation, Adventure, Fantasy",,The Adventures of Prince Achmed,7.8,1928 (Italy),66 min,CM,2531,,,,,The Wind,5-Mar,,,CM,2133
+0,4,R,Martin Scorsese,"Drama, Sport","$52,293,982 ",The Color of Money,7,17 October 1986 (USA),119 min,CM,1483,,,,,The Hummingbird Project,3.5/5,,,CM,2107
+1,5,R,"Lana Wachowski, Lilly Wachowski","Action, Sci-Fi",,The Matrix Reloaded,7.2,15 May 2003 (USA),138 min,CM,129,R,"Lana Wachowski,Lilly Wachowski","Mystery & Suspense,Science Fiction & Fantasy","$281,500,000 ",The Matrix Reloaded,3.4/5,7-May-03,138 minutes,CM,2580
+0,6,Approved,"James Algar, Clyde Geronimi, 1 more credit","Animation, Comedy, Family",,The Adventures of Ichabod and Mr. Toad,7.1,6 January 1950 (USA),68 min,CM,2161,,,,,The Brink,4.8/5,,,CM,2151
+1,7,PG-13,Paul Greengrass,"Action, Mystery, Thriller",,The Bourne Ultimatum,8,3 August 2007 (USA),115 min,CM,196,PG-13,Paul Greengrass,"Action & Adventure,Drama,Mystery & Suspense","$227,400,000 ",The Bourne Ultimatum,4.1/5,3-Aug-07,115 minutes,CM,2771
+0,8,Not Rated,Alexander Mackendrick,"Comedy, Crime",,The Ladykillers,7.8,24 February 1956 (Belgium),91 min,CM,2392,,,,,The Endurance,3.8/5,,,CM,953
+0,9,Not Rated,Mikhail Kalatozov,"Drama, Romance, War",,The Cranes Are Flying,8.3,21 March 1960 (USA),95 min,CM,1561,,,,,The Best of Enemies,5-Apr,,,CM,2102
+0,10,Not Rated,Yasujir Ozu,Drama,,The Only Son,7.8,1 April 1987 (USA),87 min,CM,2829,,,,,The Mustang,3.9/5,,,CM,2158
+0,11,Not Rated,"Lewis Milestone, Carol Reed","Adventure, Drama, History","$13,680,000 ",Mutiny on the Bounty,7.3,8 November 1962 (USA),178 min,CM,1696,,,,,Elevator to the Gallows (Ascenseur pour l'chafaud),4.2/5,,,CM,156
+0,12,Approved,Lloyd Bacon,"Comedy, Crime",,A Slight Case of Murder,7.1,5 March 1938 (USA),85 min,CM,2853,,,,,On the Basis of Sex,3.6/5,,,CM,2140
+0,13,Not Rated,Joseph L. Mankiewicz,Drama,,All About Eve,8.3,27 October 1950 (USA),138 min,CM,2309,NR,Steven Soderbergh,Drama,,High Flying Bird,3.2/5,,90 minutes,CM,2163
+0,14,Not Rated,"Jean Cocteau, Ren Clment","Drama, Fantasy, Romance","$298,718 ",Beauty and the Beast,8,23 December 1947 (USA),96 min,CM,2129,,,,,The Best of Enemies,5-Apr,,,CM,2102
+0,15,R,Jane Campion,"Drama, Music, Romance","$40,158,000 ",The Piano,7.6,11 February 1994 (USA),121 min,CM,798,,,,,The Death of Mr. Lazarescu,3.8/5,,,CM,1563
+0,16,R,Sergio Leone,Western,"$6,100,000 ","The Good, the Bad and the Ugly",8.9,29 December 1967 (USA),161 min,CM,1508,,,,,Girl on the Bridge (La Fille sur le Pont),4.1/5,,,CM,814
+0,17,Not Rated,Harold Young,"Adventure, Drama",,The Scarlet Pimpernel,7.5,7 February 1935 (USA),97 min,CM,2721,,,,,The Last Seduction,3.6/5,,,CM,1204
+0,18,TV-PG,William Worthington,"Drama, Romance",,The Dragon Painter,6.2,28 September 1919 (USA),50 min,CM,2926,,,,,The Dangerous Lives of Altar Boys,3.6/5,,,CM,388
+0,19,PG,Robert Zemeckis,"Action, Adventure, Comedy","$76,572,238 ",Romancing the Stone,6.9,30 March 1984 (USA),106 min,CM,1422,,,,,The Abyss,3.5/5,,,CM,1273
+0,20,R,Hal Ashby,"Comedy, Drama",,The Last Detail,7.6,15 February 1974 (USA),104 min,CM,1040,,,,,The Mustang,3.9/5,,,CM,2158
+0,21,Passed,Fred Niblo,"Drama, Romance","$543,000 ",The Mysterious Lady,7.3,4 August 1928 (USA),96 min,CM,2625,,,,,The Prodigy,5-Mar,,,CM,2095
+0,22,Not Rated,Alfred Hitchcock,"Crime, Drama, Mystery",,The Lodger: A Story of the London Fog,7.3,14 February 1927 (UK),74 min,CM,2621,,,,,The Abyss,3.5/5,,,CM,1273
+0,23,Approved,Sidney Lanfield,"Horror, Mystery, Thriller",,The Hound of the Baskervilles,7.6,31 March 1939 (USA),80 min,CM,2008,,,,,The Endurance,3.8/5,,,CM,953
+0,24,Not Rated,F.W. Murnau,"Drama, Romance, Adventure",,Tabu: A Story of the South Seas,7.6,1 August 1931 (USA),86 min,CM,2785,,,,,The Endurance,3.8/5,,,CM,953
+0,25,PG,John Guillermin,"Crime, Drama, Mystery",,Death on the Nile,7.3,29 September 1978 (USA),140 min,CM,1338,,,,,The Image Book (Le livre d'image),2.9/5,,,CM,2159
+0,26,R,Wolfgang Petersen,"Drama, History",,Troy,7.2,14 May 2004 (USA),163 min,CM,151,R,Lee Tamahori,Drama,,Once Were Warriors,4.1/5,,99 minutes,CM,1212
+0,27,Approved,Mervyn LeRoy,"Crime, Drama, Horror",,The Bad Seed,7.5,12 September 1956 (USA),129 min,CM,1530,,,,,Ghost in the Shell,5-Apr,,,CM,1059
+0,28,Not Rated,John Sturges,"Adventure, Drama, History","$12,100,000 ",The Great Escape,8.2,4 July 1963 (USA),172 min,CM,1783,,,,,Girl on the Bridge (La Fille sur le Pont),4.1/5,,,CM,814
+0,29,PG,Shawn Levy,"Adventure, Comedy, Family",,Night at the Museum,6.4,22 December 2006 (USA),108 min,CM,228,,,,,The Prodigy,5-Mar,,,CM,2095
+1,30,PG,Nicholas Meyer,"Action, Adventure, Sci-Fi","$74,888,996 ",Star Trek VI: The Undiscovered Country,7.2,6 December 1991 (USA),110 min,CM,623,PG,Nicholas Meyer,"Action & Adventure,Mystery & Suspense,Science Fiction & Fantasy",,Star Trek VI - The Undiscovered Country,3.5/5,3-Dec-91,109 minutes,CM,1335
+0,31,PG,Steven Spielberg,"Drama, History, War","$22,238,696 ",Empire of the Sun,7.8,25 December 1987 (USA),153 min,CM,599,,,,,The Circle (Dayereh),3.7/5,,,CM,929
+0,32,R,Peter Bogdanovich,Drama,"$29,133,000 ",The Last Picture Show,8.1,22 October 1971 (USA),118 min,CM,1114,,,,,The Beach Bum,2.2/5,,,CM,2109
+0,33,Not Rated,"Fred Niblo, Charles Brabin, 3 more credits","Adventure, Drama, Romance","$12,449,980 ",Ben-Hur: A Tale of the Christ,8,8 October 1927 (USA),143 min,CM,2498,NR,Susan Johnson,"Drama,Romance",,To All the Boys I've Loved Before,4.4/5,,120 minutes,CM,2202
+0,34,PG-13,Marc Webb,"Action, Adventure, Sci-Fi","$202,853,933 ",The Amazing Spider-Man 2,6.6,2 May 2014 (USA),142 min,CM,408,,,,,The Wedding Guest,3.7/5,,,CM,2096
+0,35,Approved,Mark Robson,"Drama, Horror, Mystery",,The Seventh Victim,6.9,21 August 1943 (USA),71 min,CM,1922,,,,,The LEGO Movie 2: The Second Part,3.7/5,,,CM,2173
+0,36,Approved,Henry King,"Biography, Drama",,The Song of Bernadette,7.7,April 1945 (USA),156 min,CM,1924,,,,,The Circle (Dayereh),3.7/5,,,CM,929
+0,37,PG,Michael Gracey,"Biography, Drama, Musical","$174,340,174 ",The Greatest Showman,7.6,20 December 2017 (USA),105 min,CM,460,,,,,The Wind,5-Mar,,,CM,2133
+0,38,PG-13,John Frankenheimer,"Drama, Thriller",,The Manchurian Candidate,8,24 October 1962 (USA),126 min,CM,1719,,,,,The Upside,4.2/5,,,CM,2108
+0,39,PG-13,Stephen Chbosky,Drama,,The Perks of Being a Wallflower,8,12 October 2012 (USA),103 min,CM,440,,,,,The Image Book (Le livre d'image),2.9/5,,,CM,2159
+0,40,Approved,"John Cromwell, W.S. Van Dyke","Adventure, Drama, Romance",,The Prisoner of Zenda,7.7,3 September 1937 (USA),101 min,CM,2889,,,,,Three Days of the Condor,3.8/5,,,CM,293
+0,41,G,Robert Wise,"Sci-Fi, Thriller",,The Andromeda Strain,7.2,12 March 1971 (USA),131 min,CM,1109,,,,,The LEGO Movie 2: The Second Part,3.7/5,,,CM,2173
+1,42,Not Rated,Sidney Lumet,Drama,"$4,360,000 ",12 Angry Men,8.9,10 April 1957 (USA),96 min,CM,1576,NR,Sidney Lumet,"Classics,Drama",,12 Angry Men (Twelve Angry Men),4.2/5,13-Apr-57,95 minutes,CM,160
+0,43,Approved,Robert Wise,"Horror, Thriller",,The Body Snatcher,7.4,October 1945 (UK),77 min,CM,2069,,,,,The Best of Enemies,5-Apr,,,CM,2102
+0,44,R,Michael Bay,"Action, Adventure, Thriller","$134,069,511 ",The Rock,7.4,7 June 1996 (USA),136 min,CM,870,,,,,Ghost in the Shell,5-Apr,,,CM,1059
+0,45,Approved,Stanley Kramer,"Drama, Romance, Sci-Fi","$11,000,000 ",On the Beach,7.2,17 December 1959 (USA),134 min,CM,1589,,,,,The Wild Pear Tree (Ahlat agaci),5-Apr,,,CM,2162
+0,46,Unrated,Henry Koster,"Drama, History","$36,000,000 ",The Robe,6.8,4 December 1953 (France),135 min,CM,2321,,,,,The Five Obstructions,3.9/5,,,CM,2631
+0,47,R,Kathryn Bigelow,"Drama, Thriller, War",,The Hurt Locker,7.6,31 July 2009 (USA),131 min,CM,273,,,,,The Brink,4.8/5,,,CM,2151
+0,48,Not Rated,Raoul Walsh,"Adventure, Family, Fantasy","$4,360,000 ",The Thief of Bagdad,7.8,11 April 1924 (Brazil),155 min,CM,2560,,,,,The Wild Pear Tree (Ahlat agaci),5-Apr,,,CM,2162
+0,49,PG,Michael Ritchie,"Comedy, Drama",,The Candidate,7.1,11 August 1972 (Ireland),110 min,CM,980,,,,,Donnie Darko: The Director's Cut,4.2/5,,,CM,3012
