@@ -42,8 +42,8 @@
 
 * Candidate set size is 72165 which is greater than 500
  * [Report for blocking rules]()
- * [Code for blocking rules]()
- * [Reduced candidate set]()
-* [Labeled Tuple pairs]()
+ * [Code for blocking rules](https://github.com/harshal95/CS839/blob/master/stage_3/code/blocking_rules.ipynb)
+ * [Reduced candidate set](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/cand_set_after_blocking)
+* [Labeled Tuple pairs](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/labeled_pairs.csv)
 * Recall = \[0.9371096866388409 - 0.9910340259360095\]
 * Precision = \[0.9186143717366582 - 0.9782780006778256\]
