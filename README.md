@@ -33,3 +33,9 @@
 * UserId: Avengers
 * ProjectId: MoviesMatcher
 * [Screenshot](https://github.com/harshal95/CS839/blob/master/match_results_all_ds_839.JPG)
+
+#### Estimating accuracy
+* [Candidate set](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/candidate_set) - 72165 tuple pairs
+* [Prediction list](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/prediction_list)
+* [Table A](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/imdb)
+* [Table B](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/rotton_tom)
