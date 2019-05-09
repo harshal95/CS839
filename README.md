@@ -40,8 +40,8 @@
 * [Table A](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/imdb)
 * [Table B](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/rotton_tom)
 
-* Candidate set size is 72165 which is greater than 500
- * [Report for blocking rules]()
+* Candidate set size is 72165 which is greater than 500 and hence we performed blocking
+ * [Report for blocking rules](https://github.com/harshal95/CS839/blob/master/stage_3/data/Stage%203-%20Blocking%20rules%20and%20estimating%20precision%2C%20recall.pdf)
  * [Code for blocking rules](https://github.com/harshal95/CS839/blob/master/stage_3/code/blocking_rules.ipynb)
  * [Reduced candidate set](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/cand_set_after_blocking)
 * [Labeled Tuple pairs](https://github.com/harshal95/CS839/blob/master/stage_3/data/downloaded_data/labeled_pairs.csv)
